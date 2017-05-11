@@ -1,0 +1,1662 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:kb="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns="http://slidetutor.upmc.edu/domainbuilder/owl/skin/UPMC/Carcinoma.owl#"
+  xml:base="http://slidetutor.upmc.edu/domainbuilder/owl/skin/UPMC/Carcinoma.owl">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl"/>
+  </owl:Ontology>
+  <owl:Class rdf:ID="Isolated_cells">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="DISTRIBUTION"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Dyskeratosis">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#DIAGNOSTIC_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Acanthosis">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#DIAGNOSTIC_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Margins">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#PROGNOSTIC_FEATURES"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:ID="STATUS"/>
+        </owl:someValuesFrom>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasAttribute"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="pN_STAGES">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#ATTRIBUTES"/>
+  </owl:Class>
+  <owl:Class rdf:ID="POST-TRAUMATIC">
+    <owl:disjointWith>
+      <owl:Class rdf:ID="KERATOACANTHOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="CLEAR_CELL_SQUAMOUS_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="PAPILLARY_SQUAMOUS_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="SMALL_CELL_SQUAMOUS_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="SQUAMOUS_CELL_CARCINOMA"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="LYMPHOEPITHELIAL_SQUAMOUS_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="SQUAMOUS_CELL_CARCINOMA_WITH_HORN_FORMATION"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="VERRUCOUS_SQUAMOUS_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="SPINDLE_CELL_SQUAMOUS_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="ACANTHOLYTIC_SQUAMOUS_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="METAPLASTIC_SQUAMOUS_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="EPIDERMOLYTIC_ACANTHOMA">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="BENIGN"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="LOCATION">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#ATTRIBUTES"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Irregular">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="REGULARITY"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Procedure_type">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Macroscopic"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasAttribute"/>
+        <owl:someValuesFrom>
+          <owl:Class rdf:ID="PROCEDURE_TYPE"/>
+        </owl:someValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="TUMORS_OF_EPIDERMIS">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#DISEASES"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Increased_granular_layer">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#DIAGNOSTIC_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:ID="pT0">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="pT_STAGES"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="pT2c">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="pT2"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Grains">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#DIAGNOSTIC_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Epidermolytic_hyperkeratosis">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#DIAGNOSTIC_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Granular_layer">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Epidermis"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="SCLEROSING_SWEAT_DUCT_CARCINOMA">
+    <owl:disjointWith>
+      <owl:Class rdf:ID="AGGRESSIVE_DIGITAL_PAPILLARY_ADENOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="ADENOID_CYSTIC_ECCRINE_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="MUCINOUS_ECCRINE_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="MALIGNANT_ECCRINE_SPIRADENOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="MALIGNANT_NODULAR_HIDRADENOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="POROCARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="MALIGNANT_MIXED_TUMOR_OF_THE_SKIN"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ECCRINE_CARCINOMA"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Papillomatosis">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#DIAGNOSTIC_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:about="#DISTRIBUTION">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#ATTRIBUTES"/>
+  </owl:Class>
+  <owl:Class rdf:ID="MERKEL_CELL_CARCINOMA">
+    <owl:disjointWith>
+      <owl:Class rdf:ID="ADNEXAL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="PAGET_DISEASE"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#SQUAMOUS_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="BASAL_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="CARCINOMA_OF_THE_SKIN"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ACANTHOMA_FISSURATUM">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#BENIGN"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#MALIGNANT_MIXED_TUMOR_OF_THE_SKIN">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ECCRINE_CARCINOMA"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#AGGRESSIVE_DIGITAL_PAPILLARY_ADENOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#ADENOID_CYSTIC_ECCRINE_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#MUCINOUS_ECCRINE_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#MALIGNANT_ECCRINE_SPIRADENOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#MALIGNANT_NODULAR_HIDRADENOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#POROCARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#SCLEROSING_SWEAT_DUCT_CARCINOMA"/>
+  </owl:Class>
+  <owl:Class rdf:ID="SCLEROSING_BASAL_CELL_CARCINOMA">
+    <owl:disjointWith>
+      <owl:Class rdf:ID="NODULAR_BASAL_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="INFILTRATING_BASAL_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#BASAL_CELL_CARCINOMA"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="SUPERFICIAL_BASAL_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="PIGMENTED_BASAL_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="KERATOTIC_BASAL_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="BASAL_CELL_CARCINOMA_WITH_ADNEXAL_DIFFERENTIATION"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="BASAL_CELL_CARCINOMA_IN_BASAL_CELL_NEVUS_SYNDROME"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="FIBROEPITHELIAL_BASAL_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="Atrophic_sebaceous_gland">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#DIAGNOSTIC_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Small_horn_pseudocyst">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#DIAGNOSTIC_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Mild_papillomatosis_in_surrounding_dermis">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#DIAGNOSTIC_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Mild">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="SEVERITY"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Infiltrate_of_cells">
+    <rdfs:subClassOf rdf:resource="#DISTRIBUTION"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Present">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="PRESENCE"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#SPINDLE_CELL_SQUAMOUS_CELL_CARCINOMA">
+    <owl:disjointWith rdf:resource="#POST-TRAUMATIC"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#SQUAMOUS_CELL_CARCINOMA"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#SQUAMOUS_CELL_CARCINOMA_WITH_HORN_FORMATION"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#LYMPHOEPITHELIAL_SQUAMOUS_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#KERATOACANTHOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#CLEAR_CELL_SQUAMOUS_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#ACANTHOLYTIC_SQUAMOUS_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#VERRUCOUS_SQUAMOUS_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#PAPILLARY_SQUAMOUS_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#SMALL_CELL_SQUAMOUS_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#METAPLASTIC_SQUAMOUS_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="DERMATOSIS_PAPULOSA_NIGRA">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#BENIGN"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Hypergranulosis">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#DIAGNOSTIC_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:ID="MALIGNANT">
+    <rdfs:subClassOf rdf:resource="#TUMORS_OF_EPIDERMIS"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ACANTHOLYTIC_ACANTHOMA">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#BENIGN"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="TISSUE_TYPE">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#ATTRIBUTES"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Absent">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#PRESENCE"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="pNX">
+    <rdfs:subClassOf rdf:resource="#pN_STAGES"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Irregular_epidermal_hyperkeratosis">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#DIAGNOSTIC_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:about="#MALIGNANT_ECCRINE_SPIRADENOMA">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#AGGRESSIVE_DIGITAL_PAPILLARY_ADENOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#ADENOID_CYSTIC_ECCRINE_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#MUCINOUS_ECCRINE_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#MALIGNANT_NODULAR_HIDRADENOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#POROCARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#MALIGNANT_MIXED_TUMOR_OF_THE_SKIN"/>
+    <owl:disjointWith rdf:resource="#SCLEROSING_SWEAT_DUCT_CARCINOMA"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ECCRINE_CARCINOMA"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ACANTHOSIS_NIGRICANS">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Papillomatosis"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Moderate_hyperkeratosis"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Mildly_thinned_epidermis"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Minimal_basal_layer_hyperpigmentation"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Minimal_perivascular_lymphohistiocytic_infiltrate"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+        <owl:someValuesFrom rdf:resource="#Small_horn_pseudocyst"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#BENIGN"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#STATUS">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#ATTRIBUTES"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Moderately_differentiated">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="HISTOLOGIC_GRADE"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#LYMPHOEPITHELIAL_SQUAMOUS_CELL_CARCINOMA">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#SMALL_CELL_SQUAMOUS_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#VERRUCOUS_SQUAMOUS_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#POST-TRAUMATIC"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#PAPILLARY_SQUAMOUS_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#SQUAMOUS_CELL_CARCINOMA_WITH_HORN_FORMATION"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#METAPLASTIC_SQUAMOUS_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#SQUAMOUS_CELL_CARCINOMA"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#CLEAR_CELL_SQUAMOUS_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#SPINDLE_CELL_SQUAMOUS_CELL_CARCINOMA"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#KERATOACANTHOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#ACANTHOLYTIC_SQUAMOUS_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="Basal_layer">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Epidermis"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#POROCARCINOMA">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ECCRINE_CARCINOMA"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#AGGRESSIVE_DIGITAL_PAPILLARY_ADENOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#ADENOID_CYSTIC_ECCRINE_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#MUCINOUS_ECCRINE_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#MALIGNANT_ECCRINE_SPIRADENOMA"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#MALIGNANT_NODULAR_HIDRADENOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#MALIGNANT_MIXED_TUMOR_OF_THE_SKIN"/>
+    <owl:disjointWith rdf:resource="#SCLEROSING_SWEAT_DUCT_CARCINOMA"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Reticular_dermis">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Dermis"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#MUCINOUS_ECCRINE_CARCINOMA">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#AGGRESSIVE_DIGITAL_PAPILLARY_ADENOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#ADENOID_CYSTIC_ECCRINE_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#MALIGNANT_ECCRINE_SPIRADENOMA"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#MALIGNANT_NODULAR_HIDRADENOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#POROCARCINOMA"/>
+    <owl:disjointWith rdf:resource="#MALIGNANT_MIXED_TUMOR_OF_THE_SKIN"/>
+    <owl:disjointWith rdf:resource="#SCLEROSING_SWEAT_DUCT_CARCINOMA"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ECCRINE_CARCINOMA"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Perineural_invasion">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#PROGNOSTIC_FEATURES"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasAttribute"/>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="#PRESENCE"/>
+        </owl:someValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="NEVUS_COMEDONICUS">
+    <rdfs:subClassOf>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Granulomatous_inflammation"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Scar"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Comedo_rupture"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#BENIGN"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Epidermal_invagination"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+              <owl:Restriction>
+                <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+                <owl:someValuesFrom>
+                  <owl:Class rdf:ID="Compact_keratin"/>
+                </owl:someValuesFrom>
+              </owl:Restriction>
+              <owl:Restriction>
+                <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+                <owl:someValuesFrom>
+                  <owl:Class rdf:ID="Lamellated_keratin"/>
+                </owl:someValuesFrom>
+              </owl:Restriction>
+            </owl:unionOf>
+          </owl:Class>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Mild_papillomatosis_in_surrounding_dermis"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Atrophic_sebaceous_gland"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Rudimentary_hair_bulbs"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="Indeterminate">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#HISTOLOGIC_GRADE"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#STATUS"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#PRESENCE"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Scar">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#DIAGNOSTIC_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:about="#SEVERITY">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#ATTRIBUTES"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Minimal_basal_layer_hyperpigmentation">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#DIAGNOSTIC_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:ID="LESION_SITE">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#ATTRIBUTES"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Downward_projection_of_epidermal_rete_ridges">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#DIAGNOSTIC_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Minimal">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="QUANTITY"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="pT2a">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#pT2"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="MAMMARY_PAGET_DISEASE">
+    <owl:disjointWith>
+      <owl:Class rdf:ID="EXTRAMAMMARY_PAGET_DISEASE"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#PAGET_DISEASE"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Decreased_granular_layer">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#DIAGNOSTIC_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:about="#ADNEXAL_CARCINOMA">
+    <owl:disjointWith rdf:resource="#MERKEL_CELL_CARCINOMA"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#PAGET_DISEASE"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#SQUAMOUS_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#BASAL_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#CARCINOMA_OF_THE_SKIN"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Rudimentary_hair_bulbs">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#DIAGNOSTIC_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:ID="MELANOACANTHOMA">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#BENIGN"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Uninvolved">
+    <rdfs:subClassOf rdf:resource="#STATUS"/>
+  </owl:Class>
+  <owl:Class rdf:about="#SQUAMOUS_CELL_CARCINOMA_WITH_HORN_FORMATION">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#CLEAR_CELL_SQUAMOUS_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#SPINDLE_CELL_SQUAMOUS_CELL_CARCINOMA"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#SMALL_CELL_SQUAMOUS_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#ACANTHOLYTIC_SQUAMOUS_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#KERATOACANTHOMA"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#SQUAMOUS_CELL_CARCINOMA"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#VERRUCOUS_SQUAMOUS_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#PAPILLARY_SQUAMOUS_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#LYMPHOEPITHELIAL_SQUAMOUS_CELL_CARCINOMA"/>
+    <owl:disjointWith rdf:resource="#POST-TRAUMATIC"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#METAPLASTIC_SQUAMOUS_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="EPIDERMAL_NEVUS">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom rdf:resource="#Irregular_epidermal_hyperkeratosis"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Papillomatosis"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom rdf:resource="#Hypergranulosis"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Basal_layer_hyperpigmentation"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Minimal_perivascular_lymphohistiocytic_infiltrate"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#BENIGN"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+        <owl:someValuesFrom>
+          <owl:Class rdf:ID="Parakeratosis"/>
+        </owl:someValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+        <owl:someValuesFrom rdf:resource="#Epidermolytic_hyperkeratosis"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Spinous_layer">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Epidermis"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="pN0">
+    <rdfs:subClassOf rdf:resource="#pN_STAGES"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ECCRINE_BASAL_CELL_CARCINOMA">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#BASAL_CELL_CARCINOMA_WITH_ADNEXAL_DIFFERENTIATION"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="FOLLICULAR_BASAL_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="#SQUAMOUS_CELL_CARCINOMA">
+    <owl:disjointWith rdf:resource="#MERKEL_CELL_CARCINOMA"/>
+    <owl:disjointWith rdf:resource="#ADNEXAL_CARCINOMA"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#PAGET_DISEASE"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#BASAL_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#CARCINOMA_OF_THE_SKIN"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#AGGRESSIVE_DIGITAL_PAPILLARY_ADENOMA">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ECCRINE_CARCINOMA"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#ADENOID_CYSTIC_ECCRINE_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#MUCINOUS_ECCRINE_CARCINOMA"/>
+    <owl:disjointWith rdf:resource="#MALIGNANT_ECCRINE_SPIRADENOMA"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#MALIGNANT_NODULAR_HIDRADENOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#POROCARCINOMA"/>
+    <owl:disjointWith rdf:resource="#MALIGNANT_MIXED_TUMOR_OF_THE_SKIN"/>
+    <owl:disjointWith rdf:resource="#SCLEROSING_SWEAT_DUCT_CARCINOMA"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Dermis">
+    <rdfs:subClassOf rdf:resource="#LOCATION"/>
+  </owl:Class>
+  <owl:Class rdf:ID="pTX">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#pT_STAGES"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Epidermis">
+    <rdfs:subClassOf rdf:resource="#LOCATION"/>
+  </owl:Class>
+  <owl:Class rdf:about="#PRESENCE">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#ATTRIBUTES"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Macroscopic">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#PROGNOSTIC_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Epidermal_invagination">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#DIAGNOSTIC_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:ID="SEBORRHEIC_KERATOSIS">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#BENIGN"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#FIBROEPITHELIAL_BASAL_CELL_CARCINOMA">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#PIGMENTED_BASAL_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#SCLEROSING_BASAL_CELL_CARCINOMA"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#BASAL_CELL_CARCINOMA_IN_BASAL_CELL_NEVUS_SYNDROME"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#BASAL_CELL_CARCINOMA"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#SUPERFICIAL_BASAL_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#BASAL_CELL_CARCINOMA_WITH_ADNEXAL_DIFFERENTIATION"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#INFILTRATING_BASAL_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#KERATOTIC_BASAL_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#NODULAR_BASAL_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="Psoriasiform_hyperplasia">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#DIAGNOSTIC_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Lamellated_keratin">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#DIAGNOSTIC_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:about="#BASAL_CELL_CARCINOMA_WITH_ADNEXAL_DIFFERENTIATION">
+    <owl:disjointWith rdf:resource="#SCLEROSING_BASAL_CELL_CARCINOMA"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#BASAL_CELL_CARCINOMA_IN_BASAL_CELL_NEVUS_SYNDROME"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#INFILTRATING_BASAL_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#BASAL_CELL_CARCINOMA"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#SUPERFICIAL_BASAL_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#PIGMENTED_BASAL_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#FIBROEPITHELIAL_BASAL_CELL_CARCINOMA"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#KERATOTIC_BASAL_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#NODULAR_BASAL_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="pT3c">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="pT3"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#BENIGN">
+    <rdfs:subClassOf rdf:resource="#TUMORS_OF_EPIDERMIS"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Microabscess_formation">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#DIAGNOSTIC_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:about="#HISTOLOGIC_GRADE">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#ATTRIBUTES"/>
+  </owl:Class>
+  <owl:Class rdf:about="#REGULARITY">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#ATTRIBUTES"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Basal_layer_hyperpigmentation">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#DIAGNOSTIC_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Minimal_perivascular_lymphohistiocytic_infiltrate">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#DIAGNOSTIC_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:ID="pT4b">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="pT4"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="TRICHOLEMMOCARCINOMA">
+    <rdfs:subClassOf rdf:resource="#ADNEXAL_CARCINOMA"/>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="MALIGNANT_PILOMATRICOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="SEBACEOUS_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="APOCRINE_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#ECCRINE_CARCINOMA"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="#pT_STAGES">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#ATTRIBUTES"/>
+  </owl:Class>
+  <owl:Class rdf:about="#PROCEDURE_TYPE">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#ATTRIBUTES"/>
+  </owl:Class>
+  <owl:Class rdf:about="#PIGMENTED_BASAL_CELL_CARCINOMA">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#SUPERFICIAL_BASAL_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#KERATOTIC_BASAL_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#BASAL_CELL_CARCINOMA"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#BASAL_CELL_CARCINOMA_IN_BASAL_CELL_NEVUS_SYNDROME"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#FIBROEPITHELIAL_BASAL_CELL_CARCINOMA"/>
+    <owl:disjointWith rdf:resource="#BASAL_CELL_CARCINOMA_WITH_ADNEXAL_DIFFERENTIATION"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#INFILTRATING_BASAL_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#SCLEROSING_BASAL_CELL_CARCINOMA"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#NODULAR_BASAL_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="#SEBACEOUS_CARCINOMA">
+    <rdfs:subClassOf rdf:resource="#ADNEXAL_CARCINOMA"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#MALIGNANT_PILOMATRICOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#TRICHOLEMMOCARCINOMA"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#APOCRINE_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#ECCRINE_CARCINOMA"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="#pT2">
+    <rdfs:subClassOf rdf:resource="#pT_STAGES"/>
+  </owl:Class>
+  <owl:Class rdf:about="#BASAL_CELL_CARCINOMA_IN_BASAL_CELL_NEVUS_SYNDROME">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#BASAL_CELL_CARCINOMA"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#SCLEROSING_BASAL_CELL_CARCINOMA"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#KERATOTIC_BASAL_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#INFILTRATING_BASAL_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#BASAL_CELL_CARCINOMA_WITH_ADNEXAL_DIFFERENTIATION"/>
+    <owl:disjointWith rdf:resource="#PIGMENTED_BASAL_CELL_CARCINOMA"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#SUPERFICIAL_BASAL_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#NODULAR_BASAL_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#FIBROEPITHELIAL_BASAL_CELL_CARCINOMA"/>
+  </owl:Class>
+  <owl:Class rdf:about="#MALIGNANT_NODULAR_HIDRADENOMA">
+    <owl:disjointWith rdf:resource="#AGGRESSIVE_DIGITAL_PAPILLARY_ADENOMA"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#ADENOID_CYSTIC_ECCRINE_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#MUCINOUS_ECCRINE_CARCINOMA"/>
+    <owl:disjointWith rdf:resource="#MALIGNANT_ECCRINE_SPIRADENOMA"/>
+    <owl:disjointWith rdf:resource="#POROCARCINOMA"/>
+    <owl:disjointWith rdf:resource="#MALIGNANT_MIXED_TUMOR_OF_THE_SKIN"/>
+    <owl:disjointWith rdf:resource="#SCLEROSING_SWEAT_DUCT_CARCINOMA"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ECCRINE_CARCINOMA"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Tissue_type">
+    <rdfs:subClassOf rdf:resource="#Macroscopic"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasAttribute"/>
+        <owl:someValuesFrom rdf:resource="#TISSUE_TYPE"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Lateral_margins">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasAttribute"/>
+        <owl:someValuesFrom rdf:resource="#STATUS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Margins"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Suprabasalar_clefting">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#DIAGNOSTIC_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:about="#CARCINOMA_OF_THE_SKIN">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:ID="Lymphatic_invasion"/>
+        </owl:someValuesFrom>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPrognostic"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPrognostic"/>
+        <owl:someValuesFrom>
+          <owl:Class rdf:ID="Deep_margin"/>
+        </owl:someValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:ID="Vascular_invasion"/>
+        </owl:someValuesFrom>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPrognostic"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPrognostic"/>
+        <owl:someValuesFrom rdf:resource="#Perineural_invasion"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPrognostic"/>
+        <owl:someValuesFrom rdf:resource="#Lateral_margins"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Procedure_type"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPrognostic"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#MALIGNANT"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:ID="Lesion_site"/>
+        </owl:someValuesFrom>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPrognostic"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Tissue_type"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPrognostic"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="BOWENS_DISEASE">
+    <rdfs:subClassOf rdf:resource="#MALIGNANT"/>
+  </owl:Class>
+  <owl:Class rdf:ID="FAMILIAL_DYSKERATOTIC_COMEDONES">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasAbsentFinding"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Pilosebaceous_structures"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+              <owl:Restriction>
+                <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+                <owl:someValuesFrom>
+                  <owl:Class rdf:ID="Corp_ronds"/>
+                </owl:someValuesFrom>
+              </owl:Restriction>
+              <owl:Restriction>
+                <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+                <owl:someValuesFrom rdf:resource="#Grains"/>
+              </owl:Restriction>
+            </owl:unionOf>
+          </owl:Class>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom rdf:resource="#Acanthosis"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom rdf:resource="#Dyskeratosis"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Suprabasalar_clefting"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Dilated_follicle-like_structure"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Laminated_keratinous_material"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="#BENIGN"/>
+  </owl:Class>
+  <owl:Class rdf:ID="pT1a">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="pT1"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Cornified_layer">
+    <rdfs:subClassOf rdf:resource="#Epidermis"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Compact_keratin">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#DIAGNOSTIC_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Biopsy">
+    <rdfs:subClassOf rdf:resource="#PROCEDURE_TYPE"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Papillary_dermis">
+    <rdfs:subClassOf rdf:resource="#Dermis"/>
+  </owl:Class>
+  <owl:Class rdf:about="#pT1">
+    <rdfs:subClassOf rdf:resource="#pT_STAGES"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Parakeratosis">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#DIAGNOSTIC_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Excision">
+    <rdfs:subClassOf rdf:resource="#PROCEDURE_TYPE"/>
+  </owl:Class>
+  <owl:Class rdf:about="#BASAL_CELL_CARCINOMA">
+    <owl:disjointWith rdf:resource="#MERKEL_CELL_CARCINOMA"/>
+    <owl:disjointWith rdf:resource="#ADNEXAL_CARCINOMA"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#PAGET_DISEASE"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#SQUAMOUS_CELL_CARCINOMA"/>
+    <rdfs:subClassOf rdf:resource="#CARCINOMA_OF_THE_SKIN"/>
+  </owl:Class>
+  <owl:Class rdf:ID="CONFLUENT_AND_RETICULATE_PAPILLOMATOSIS">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Papillomatosis"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Hyperkeratosis"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Parakeratosis"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Acanthosis"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom rdf:resource="#Basal_layer_hyperpigmentation"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Epidermal_downgrowths_from_between_rete_ridges"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="#BENIGN"/>
+  </owl:Class>
+  <owl:Class rdf:ID="LARGE-CELL_ACANTHOMA">
+    <rdfs:subClassOf rdf:resource="#BENIGN"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ARSENICAL_KERATOSIS">
+    <rdfs:subClassOf rdf:resource="#BENIGN"/>
+  </owl:Class>
+  <owl:Class rdf:ID="pT4a">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#pT4"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Well_differentiated">
+    <rdfs:subClassOf rdf:resource="#HISTOLOGIC_GRADE"/>
+  </owl:Class>
+  <owl:Class rdf:about="#VERRUCOUS_SQUAMOUS_CELL_CARCINOMA">
+    <owl:disjointWith rdf:resource="#LYMPHOEPITHELIAL_SQUAMOUS_CELL_CARCINOMA"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#CLEAR_CELL_SQUAMOUS_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#ACANTHOLYTIC_SQUAMOUS_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#METAPLASTIC_SQUAMOUS_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#SPINDLE_CELL_SQUAMOUS_CELL_CARCINOMA"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#PAPILLARY_SQUAMOUS_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#SMALL_CELL_SQUAMOUS_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf rdf:resource="#SQUAMOUS_CELL_CARCINOMA"/>
+    <owl:disjointWith rdf:resource="#POST-TRAUMATIC"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#KERATOACANTHOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#SQUAMOUS_CELL_CARCINOMA_WITH_HORN_FORMATION"/>
+  </owl:Class>
+  <owl:Class rdf:ID="PRURIGO_NODULARIS">
+    <rdfs:subClassOf rdf:resource="#BENIGN"/>
+  </owl:Class>
+  <owl:Class rdf:about="#NODULAR_BASAL_CELL_CARCINOMA">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#INFILTRATING_BASAL_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#BASAL_CELL_CARCINOMA_WITH_ADNEXAL_DIFFERENTIATION"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#SUPERFICIAL_BASAL_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#FIBROEPITHELIAL_BASAL_CELL_CARCINOMA"/>
+    <owl:disjointWith rdf:resource="#SCLEROSING_BASAL_CELL_CARCINOMA"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#KERATOTIC_BASAL_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#BASAL_CELL_CARCINOMA_IN_BASAL_CELL_NEVUS_SYNDROME"/>
+    <owl:disjointWith rdf:resource="#PIGMENTED_BASAL_CELL_CARCINOMA"/>
+    <rdfs:subClassOf rdf:resource="#BASAL_CELL_CARCINOMA"/>
+  </owl:Class>
+  <owl:Class rdf:ID="pT3a">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#pT3"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="CLEAR-CELL_ACANTHOMA">
+    <rdfs:subClassOf rdf:resource="#BENIGN"/>
+  </owl:Class>
+  <owl:Class rdf:ID="pM1">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="pM_STAGES"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#QUANTITY">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#ATTRIBUTES"/>
+  </owl:Class>
+  <owl:Class rdf:ID="pTis">
+    <rdfs:subClassOf rdf:resource="#pT_STAGES"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Lymphatic_invasion">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#PROGNOSTIC_FEATURES"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasAttribute"/>
+        <owl:someValuesFrom rdf:resource="#PRESENCE"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="HISTOLOGIC_TYPE">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#ATTRIBUTES"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Deep_margin">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#STATUS"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasAttribute"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Margins"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Perivascular_and_interface_lymphocytic_infiltrate">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#DIAGNOSTIC_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:ID="pN1">
+    <rdfs:subClassOf rdf:resource="#pN_STAGES"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Moderate_hyperkeratosis">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#DIAGNOSTIC_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:ID="pT2b">
+    <rdfs:subClassOf rdf:resource="#pT2"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Hyperkeratosis">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#DIAGNOSTIC_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Mildly_thinned_epidermis">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#DIAGNOSTIC_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:about="#KERATOTIC_BASAL_CELL_CARCINOMA">
+    <rdfs:subClassOf rdf:resource="#BASAL_CELL_CARCINOMA"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#INFILTRATING_BASAL_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#FIBROEPITHELIAL_BASAL_CELL_CARCINOMA"/>
+    <owl:disjointWith rdf:resource="#BASAL_CELL_CARCINOMA_WITH_ADNEXAL_DIFFERENTIATION"/>
+    <owl:disjointWith rdf:resource="#SCLEROSING_BASAL_CELL_CARCINOMA"/>
+    <owl:disjointWith rdf:resource="#NODULAR_BASAL_CELL_CARCINOMA"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#SUPERFICIAL_BASAL_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#PIGMENTED_BASAL_CELL_CARCINOMA"/>
+    <owl:disjointWith rdf:resource="#BASAL_CELL_CARCINOMA_IN_BASAL_CELL_NEVUS_SYNDROME"/>
+  </owl:Class>
+  <owl:Class rdf:about="#METAPLASTIC_SQUAMOUS_CELL_CARCINOMA">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#KERATOACANTHOMA"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf rdf:resource="#SQUAMOUS_CELL_CARCINOMA"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#SMALL_CELL_SQUAMOUS_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#ACANTHOLYTIC_SQUAMOUS_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#SPINDLE_CELL_SQUAMOUS_CELL_CARCINOMA"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#CLEAR_CELL_SQUAMOUS_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#SQUAMOUS_CELL_CARCINOMA_WITH_HORN_FORMATION"/>
+    <owl:disjointWith rdf:resource="#VERRUCOUS_SQUAMOUS_CELL_CARCINOMA"/>
+    <owl:disjointWith rdf:resource="#POST-TRAUMATIC"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#PAPILLARY_SQUAMOUS_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#LYMPHOEPITHELIAL_SQUAMOUS_CELL_CARCINOMA"/>
+  </owl:Class>
+  <owl:Class rdf:about="#INFILTRATING_BASAL_CELL_CARCINOMA">
+    <owl:disjointWith rdf:resource="#PIGMENTED_BASAL_CELL_CARCINOMA"/>
+    <rdfs:subClassOf rdf:resource="#BASAL_CELL_CARCINOMA"/>
+    <owl:disjointWith rdf:resource="#KERATOTIC_BASAL_CELL_CARCINOMA"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#SUPERFICIAL_BASAL_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#BASAL_CELL_CARCINOMA_WITH_ADNEXAL_DIFFERENTIATION"/>
+    <owl:disjointWith rdf:resource="#SCLEROSING_BASAL_CELL_CARCINOMA"/>
+    <owl:disjointWith rdf:resource="#FIBROEPITHELIAL_BASAL_CELL_CARCINOMA"/>
+    <owl:disjointWith rdf:resource="#BASAL_CELL_CARCINOMA_IN_BASAL_CELL_NEVUS_SYNDROME"/>
+    <owl:disjointWith rdf:resource="#NODULAR_BASAL_CELL_CARCINOMA"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ACTINIC_CHEILITIS">
+    <rdfs:subClassOf rdf:resource="#BENIGN"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Mild_hyperkeratosis">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#DIAGNOSTIC_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:about="#PAPILLARY_SQUAMOUS_CELL_CARCINOMA">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#KERATOACANTHOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#SMALL_CELL_SQUAMOUS_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#POST-TRAUMATIC"/>
+    <owl:disjointWith rdf:resource="#SQUAMOUS_CELL_CARCINOMA_WITH_HORN_FORMATION"/>
+    <owl:disjointWith rdf:resource="#LYMPHOEPITHELIAL_SQUAMOUS_CELL_CARCINOMA"/>
+    <owl:disjointWith rdf:resource="#SPINDLE_CELL_SQUAMOUS_CELL_CARCINOMA"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#CLEAR_CELL_SQUAMOUS_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#VERRUCOUS_SQUAMOUS_CELL_CARCINOMA"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#ACANTHOLYTIC_SQUAMOUS_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#METAPLASTIC_SQUAMOUS_CELL_CARCINOMA"/>
+    <rdfs:subClassOf rdf:resource="#SQUAMOUS_CELL_CARCINOMA"/>
+  </owl:Class>
+  <owl:Class rdf:ID="WARTY_DYSKERATOMA">
+    <rdfs:subClassOf rdf:resource="#BENIGN"/>
+  </owl:Class>
+  <owl:Class rdf:about="#SMALL_CELL_SQUAMOUS_CELL_CARCINOMA">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#KERATOACANTHOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#SPINDLE_CELL_SQUAMOUS_CELL_CARCINOMA"/>
+    <owl:disjointWith rdf:resource="#LYMPHOEPITHELIAL_SQUAMOUS_CELL_CARCINOMA"/>
+    <owl:disjointWith rdf:resource="#VERRUCOUS_SQUAMOUS_CELL_CARCINOMA"/>
+    <rdfs:subClassOf rdf:resource="#SQUAMOUS_CELL_CARCINOMA"/>
+    <owl:disjointWith rdf:resource="#METAPLASTIC_SQUAMOUS_CELL_CARCINOMA"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#ACANTHOLYTIC_SQUAMOUS_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#SQUAMOUS_CELL_CARCINOMA_WITH_HORN_FORMATION"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#CLEAR_CELL_SQUAMOUS_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#PAPILLARY_SQUAMOUS_CELL_CARCINOMA"/>
+    <owl:disjointWith rdf:resource="#POST-TRAUMATIC"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Pilosebaceous_structures">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#DIAGNOSTIC_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:ID="pT1b">
+    <rdfs:subClassOf rdf:resource="#pT1"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Undifferentiated">
+    <rdfs:subClassOf rdf:resource="#HISTOLOGIC_GRADE"/>
+  </owl:Class>
+  <owl:Class rdf:about="#MALIGNANT_PILOMATRICOMA">
+    <rdfs:subClassOf rdf:resource="#ADNEXAL_CARCINOMA"/>
+    <owl:disjointWith rdf:resource="#TRICHOLEMMOCARCINOMA"/>
+    <owl:disjointWith rdf:resource="#SEBACEOUS_CARCINOMA"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#APOCRINE_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#ECCRINE_CARCINOMA"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="#APOCRINE_CARCINOMA">
+    <owl:disjointWith rdf:resource="#MALIGNANT_PILOMATRICOMA"/>
+    <owl:disjointWith rdf:resource="#TRICHOLEMMOCARCINOMA"/>
+    <owl:disjointWith rdf:resource="#SEBACEOUS_CARCINOMA"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#ECCRINE_CARCINOMA"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf rdf:resource="#ADNEXAL_CARCINOMA"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ACTINIC_KERATOSIS">
+    <rdfs:subClassOf rdf:resource="#BENIGN"/>
+  </owl:Class>
+  <owl:Class rdf:about="#pT3">
+    <rdfs:subClassOf rdf:resource="#pT_STAGES"/>
+  </owl:Class>
+  <owl:Class rdf:ID="pT1c">
+    <rdfs:subClassOf rdf:resource="#pT1"/>
+  </owl:Class>
+  <owl:Class rdf:ID="INFLAMMATORY_LINEAR_VERRUCOUS_EPIDERMAL_NEVUS">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom rdf:resource="#Hyperkeratosis"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom rdf:resource="#Parakeratosis"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom rdf:resource="#Increased_granular_layer"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom rdf:resource="#Decreased_granular_layer"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom rdf:resource="#Papillomatosis"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom rdf:resource="#Psoriasiform_hyperplasia"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Exocytosis"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Microabscess_formation"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Perivascular_and_interface_lymphocytic_infiltrate"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="#BENIGN"/>
+  </owl:Class>
+  <owl:Class rdf:about="#SUPERFICIAL_BASAL_CELL_CARCINOMA">
+    <owl:disjointWith rdf:resource="#FIBROEPITHELIAL_BASAL_CELL_CARCINOMA"/>
+    <owl:disjointWith rdf:resource="#SCLEROSING_BASAL_CELL_CARCINOMA"/>
+    <owl:disjointWith rdf:resource="#INFILTRATING_BASAL_CELL_CARCINOMA"/>
+    <owl:disjointWith rdf:resource="#PIGMENTED_BASAL_CELL_CARCINOMA"/>
+    <owl:disjointWith rdf:resource="#BASAL_CELL_CARCINOMA_WITH_ADNEXAL_DIFFERENTIATION"/>
+    <owl:disjointWith rdf:resource="#BASAL_CELL_CARCINOMA_IN_BASAL_CELL_NEVUS_SYNDROME"/>
+    <owl:disjointWith rdf:resource="#NODULAR_BASAL_CELL_CARCINOMA"/>
+    <rdfs:subClassOf rdf:resource="#BASAL_CELL_CARCINOMA"/>
+    <owl:disjointWith rdf:resource="#KERATOTIC_BASAL_CELL_CARCINOMA"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Poorly_differentiated">
+    <rdfs:subClassOf rdf:resource="#HISTOLOGIC_GRADE"/>
+  </owl:Class>
+  <owl:Class rdf:about="#PAGET_DISEASE">
+    <rdfs:subClassOf rdf:resource="#CARCINOMA_OF_THE_SKIN"/>
+    <owl:disjointWith rdf:resource="#MERKEL_CELL_CARCINOMA"/>
+    <owl:disjointWith rdf:resource="#ADNEXAL_CARCINOMA"/>
+    <owl:disjointWith rdf:resource="#SQUAMOUS_CELL_CARCINOMA"/>
+    <owl:disjointWith rdf:resource="#BASAL_CELL_CARCINOMA"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Involved">
+    <rdfs:subClassOf rdf:resource="#STATUS"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Not_applicable">
+    <rdfs:subClassOf rdf:resource="#HISTOLOGIC_GRADE"/>
+  </owl:Class>
+  <owl:Class rdf:ID="pT3b">
+    <rdfs:subClassOf rdf:resource="#pT3"/>
+  </owl:Class>
+  <owl:Class rdf:about="#pM_STAGES">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#ATTRIBUTES"/>
+  </owl:Class>
+  <owl:Class rdf:about="#ECCRINE_CARCINOMA">
+    <owl:disjointWith rdf:resource="#MALIGNANT_PILOMATRICOMA"/>
+    <owl:disjointWith rdf:resource="#TRICHOLEMMOCARCINOMA"/>
+    <owl:disjointWith rdf:resource="#SEBACEOUS_CARCINOMA"/>
+    <owl:disjointWith rdf:resource="#APOCRINE_CARCINOMA"/>
+    <rdfs:subClassOf rdf:resource="#ADNEXAL_CARCINOMA"/>
+  </owl:Class>
+  <owl:Class rdf:about="#EXTRAMAMMARY_PAGET_DISEASE">
+    <owl:disjointWith rdf:resource="#MAMMARY_PAGET_DISEASE"/>
+    <rdfs:subClassOf rdf:resource="#PAGET_DISEASE"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Moderate">
+    <rdfs:subClassOf rdf:resource="#QUANTITY"/>
+    <rdfs:subClassOf rdf:resource="#SEVERITY"/>
+  </owl:Class>
+  <owl:Class rdf:about="#ACANTHOLYTIC_SQUAMOUS_CELL_CARCINOMA">
+    <owl:disjointWith rdf:resource="#METAPLASTIC_SQUAMOUS_CELL_CARCINOMA"/>
+    <rdfs:subClassOf rdf:resource="#SQUAMOUS_CELL_CARCINOMA"/>
+    <owl:disjointWith rdf:resource="#VERRUCOUS_SQUAMOUS_CELL_CARCINOMA"/>
+    <owl:disjointWith rdf:resource="#PAPILLARY_SQUAMOUS_CELL_CARCINOMA"/>
+    <owl:disjointWith rdf:resource="#POST-TRAUMATIC"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#CLEAR_CELL_SQUAMOUS_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#KERATOACANTHOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#SMALL_CELL_SQUAMOUS_CELL_CARCINOMA"/>
+    <owl:disjointWith rdf:resource="#LYMPHOEPITHELIAL_SQUAMOUS_CELL_CARCINOMA"/>
+    <owl:disjointWith rdf:resource="#SQUAMOUS_CELL_CARCINOMA_WITH_HORN_FORMATION"/>
+    <owl:disjointWith rdf:resource="#SPINDLE_CELL_SQUAMOUS_CELL_CARCINOMA"/>
+  </owl:Class>
+  <owl:Class rdf:ID="pMX">
+    <rdfs:subClassOf rdf:resource="#pM_STAGES"/>
+  </owl:Class>
+  <owl:Class rdf:about="#FOLLICULAR_BASAL_CELL_CARCINOMA">
+    <rdfs:subClassOf rdf:resource="#BASAL_CELL_CARCINOMA_WITH_ADNEXAL_DIFFERENTIATION"/>
+    <owl:disjointWith rdf:resource="#ECCRINE_BASAL_CELL_CARCINOMA"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Marked">
+    <rdfs:subClassOf rdf:resource="#QUANTITY"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Comedo_rupture">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#DIAGNOSTIC_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:ID="DOWLING-DEGOS_DISEASE">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom rdf:resource="#Mild_hyperkeratosis"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Mildly_thinned_epidermis"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Downward_projection_of_epidermal_rete_ridges"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Basal_layer_hyperpigmentation"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+        <owl:someValuesFrom rdf:resource="#Small_horn_pseudocyst"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#BENIGN"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Vascular_invasion">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#PROGNOSTIC_FEATURES"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#PRESENCE"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasAttribute"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#pT4">
+    <rdfs:subClassOf rdf:resource="#pT_STAGES"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Exocytosis">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#DIAGNOSTIC_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Dilated_follicle-like_structure">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#DIAGNOSTIC_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Granulomatous_inflammation">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#DIAGNOSTIC_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:about="#ADENOID_CYSTIC_ECCRINE_CARCINOMA">
+    <owl:disjointWith rdf:resource="#AGGRESSIVE_DIGITAL_PAPILLARY_ADENOMA"/>
+    <owl:disjointWith rdf:resource="#MUCINOUS_ECCRINE_CARCINOMA"/>
+    <owl:disjointWith rdf:resource="#MALIGNANT_ECCRINE_SPIRADENOMA"/>
+    <owl:disjointWith rdf:resource="#MALIGNANT_NODULAR_HIDRADENOMA"/>
+    <owl:disjointWith rdf:resource="#POROCARCINOMA"/>
+    <owl:disjointWith rdf:resource="#MALIGNANT_MIXED_TUMOR_OF_THE_SKIN"/>
+    <owl:disjointWith rdf:resource="#SCLEROSING_SWEAT_DUCT_CARCINOMA"/>
+    <rdfs:subClassOf rdf:resource="#ECCRINE_CARCINOMA"/>
+  </owl:Class>
+  <owl:Class rdf:about="#KERATOACANTHOMA">
+    <owl:disjointWith rdf:resource="#SMALL_CELL_SQUAMOUS_CELL_CARCINOMA"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#CLEAR_CELL_SQUAMOUS_CELL_CARCINOMA"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#LYMPHOEPITHELIAL_SQUAMOUS_CELL_CARCINOMA"/>
+    <owl:disjointWith rdf:resource="#POST-TRAUMATIC"/>
+    <owl:disjointWith rdf:resource="#ACANTHOLYTIC_SQUAMOUS_CELL_CARCINOMA"/>
+    <owl:disjointWith rdf:resource="#SQUAMOUS_CELL_CARCINOMA_WITH_HORN_FORMATION"/>
+    <owl:disjointWith rdf:resource="#VERRUCOUS_SQUAMOUS_CELL_CARCINOMA"/>
+    <owl:disjointWith rdf:resource="#SPINDLE_CELL_SQUAMOUS_CELL_CARCINOMA"/>
+    <owl:disjointWith rdf:resource="#METAPLASTIC_SQUAMOUS_CELL_CARCINOMA"/>
+    <owl:disjointWith rdf:resource="#PAPILLARY_SQUAMOUS_CELL_CARCINOMA"/>
+    <rdfs:subClassOf rdf:resource="#SQUAMOUS_CELL_CARCINOMA"/>
+  </owl:Class>
+  <owl:Class rdf:about="#CLEAR_CELL_SQUAMOUS_CELL_CARCINOMA">
+    <owl:disjointWith rdf:resource="#SPINDLE_CELL_SQUAMOUS_CELL_CARCINOMA"/>
+    <owl:disjointWith rdf:resource="#KERATOACANTHOMA"/>
+    <owl:disjointWith rdf:resource="#METAPLASTIC_SQUAMOUS_CELL_CARCINOMA"/>
+    <owl:disjointWith rdf:resource="#SQUAMOUS_CELL_CARCINOMA_WITH_HORN_FORMATION"/>
+    <owl:disjointWith rdf:resource="#VERRUCOUS_SQUAMOUS_CELL_CARCINOMA"/>
+    <rdfs:subClassOf rdf:resource="#SQUAMOUS_CELL_CARCINOMA"/>
+    <owl:disjointWith rdf:resource="#ACANTHOLYTIC_SQUAMOUS_CELL_CARCINOMA"/>
+    <owl:disjointWith rdf:resource="#POST-TRAUMATIC"/>
+    <owl:disjointWith rdf:resource="#PAPILLARY_SQUAMOUS_CELL_CARCINOMA"/>
+    <owl:disjointWith rdf:resource="#LYMPHOEPITHELIAL_SQUAMOUS_CELL_CARCINOMA"/>
+    <owl:disjointWith rdf:resource="#SMALL_CELL_SQUAMOUS_CELL_CARCINOMA"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Regular">
+    <rdfs:subClassOf rdf:resource="#REGULARITY"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Laminated_keratinous_material">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#DIAGNOSTIC_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Corp_ronds">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#DIAGNOSTIC_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Severe">
+    <rdfs:subClassOf rdf:resource="#SEVERITY"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Epidermal_downgrowths_from_between_rete_ridges">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#DIAGNOSTIC_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Lesion_site">
+    <rdfs:subClassOf rdf:resource="#Macroscopic"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasAttribute"/>
+        <owl:someValuesFrom rdf:resource="#LESION_SITE"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.4, Build 506)  http://protege.stanford.edu -->

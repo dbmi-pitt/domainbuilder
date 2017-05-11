@@ -1,0 +1,3475 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns="http://slidetutor.upmc.edu/domainbuilder/owl/skin/UPMC/Melanocytic.owl#"
+    xmlns:kb="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#"
+  xml:base="http://slidetutor.upmc.edu/domainbuilder/owl/skin/UPMC/Melanocytic.owl">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl"/>
+  </owl:Ontology>
+  <owl:Class rdf:ID="Epithelioid">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Epithelioid_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Modifier"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="SHAPE"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Re-excision_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:ID="pT4b">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="pT4b_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="pT4"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Elastosis_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Location">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#PROGNOSTIC_FINDINGS"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Moderate_inflammatory_infiltrate">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Moderate_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Inflammatory_infiltrate"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Moderate_word"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Inflammatory_infiltrate"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="Excision_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Millimeter_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >mm</rdfs:label>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >millimeter</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Simplex_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Moderate">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Modifier"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Moderate_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="SEVERITY"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Brisk"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Cytologic_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Five_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:ID="pN3_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:ID="pTX_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:ID="JUNCTIONAL_NEVUS">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Junctional_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Nevus_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Disease"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="MELANOCYTIC_NEVUS"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+              <owl:Restriction>
+                <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+                <owl:someValuesFrom>
+                  <owl:Class rdf:ID="Nests_at_dermoepidermal_junction"/>
+                </owl:someValuesFrom>
+              </owl:Restriction>
+              <owl:Restriction>
+                <owl:someValuesFrom>
+                  <owl:Class rdf:ID="Lentiginous_proliferation_of_melanocytes"/>
+                </owl:someValuesFrom>
+                <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+              </owl:Restriction>
+            </owl:unionOf>
+          </owl:Class>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Nests_in_dermis"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasAbsentFinding"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="Severe">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Severe_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Modifier"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#SEVERITY"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="pM1b_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Inferior">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#MODIFIERS"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Inferior_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Modifier"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="MATURATION_LEVEL">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#MODIFIERS"/>
+  </owl:Class>
+  <owl:Class rdf:ID="pT1b_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Keratosis_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Excision">
+    <rdfs:subClassOf rdf:resource="#Excision_word"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Prognostic"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Procedure"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Disposition_of_melanocytes">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#ARCHITECTURAL_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Cell_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NNP"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Pigmentation_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:ID="pT4_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Deep_margin_uninvolved">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Deep_margin"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Uninvolved_word"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="pT3a_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Shave_excision">
+    <rdfs:subClassOf rdf:resource="#Excision"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Shave_word"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Enlarged_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Non-brisk_tumor_infiltrating_lymphocytes">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Non-brisk_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Tumor_infiltrating_lymphocytes"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Solar_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Lentiginous_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="pNX">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="pN_stage"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="pNX_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Prognostic"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Non-brisk">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Modifier"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Non-brisk_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="QUANTITY"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Symmetrical">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Symmetrical_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Modifier"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="SYMMETRY"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Moderate_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Spindle_cells">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Cell_type"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Diagnostic"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NNP"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Cell_word"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Spindle_word"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Spindle_word"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Cell_word"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="#Tumor_infiltrating_lymphocytes">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#PROGNOSTIC_FINDINGS"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Tumor_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Infiltrating_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Lymphocytes_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Prognostic"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Radial_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Satellite_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Preserved_rete">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Preserved_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Rete"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Preserved_word"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Rete"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="Round">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Round_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Modifier"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#SHAPE"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Spindle">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Spindle_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Modifier"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#SHAPE"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Nest_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:ID="pT1a_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:ID="pT1_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:ID="pN2a_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Acanthosis_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Margin_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="pN1">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#pN_stage"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Prognostic"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="pN1_word"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Deep_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="pN2c_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:ID="INTRADERMAL_NEVUS">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Nests_at_dermoepidermal_junction"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasAbsentFinding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasAbsentFinding"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Lentiginous_proliferation_of_melanocytes"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Nests_in_dermis"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Nevus_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Intradermal_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Disease"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#MELANOCYTIC_NEVUS"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Uninvolved">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Uninvolved_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Modifier"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="STATUS"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Marked">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Marked_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Modifier"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Brisk"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="LENTIGO_SIMPLEX">
+    <rdfs:subClassOf rdf:resource="#Simplex_word"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Lentigo_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Disease"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="BENIGN_MELANOCYTIC_LESION"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Increased_number_of_basilar_melanocytes"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Melanophages"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Hyperpigmentation_of_epidermis"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Elongated_rete"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Solar_elastosis"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasAbsentFinding"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="#Marked_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="BALLOON_CELL_NEVUS">
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+        <owl:someValuesFrom>
+          <owl:Class rdf:ID="Balloon_cells"/>
+        </owl:someValuesFrom>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Balloon_cells"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Nevus_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Disease"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#MELANOCYTIC_NEVUS"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Well-circumscribed">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Well-circumscribed_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Modifier"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="CIRCUMSCRIPTION"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Proliferation">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#ARCHITECTURAL_FEATURES"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Proliferation_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Diagnostic"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Inflammatory_infiltrate_with_well-circumscribed_inferior_margin">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Inflammatory_infiltrate"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Well-circumscribed_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Inferior_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Margin_word"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Inflammatory_infiltrate"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Well-circumscribed_word"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Inferior_word"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom rdf:resource="#Margin_word"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="Acanthosis_of_epidermis">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Diagnostic"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Epidermis_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Acanthosis"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Acanthosis"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Epidermis_word"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="Skin_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Lateral_margin">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Margin"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Prognostic"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Lateral_word"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Melanocyte_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NNP"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Nests_in_dermis">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Nests"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Dermis_word"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Dermis_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Nests"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Vascular_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Balloon_cells">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Cell_type"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Cell_word"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Balloon_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Diagnostic"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Balloon_word"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Cell_word"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="pT2b">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="pT2b_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="pT2"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#pT4b_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:ID="pN0">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#pN_stage"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Prognostic"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="pN0_word"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Dermoepidermal_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#QUANTITY">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#MODIFIERS"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Acanthosis">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#OTHER_FEATURES"/>
+    <rdfs:subClassOf rdf:resource="#Acanthosis_word"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Diagnostic"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Indeterminate">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Indeterminate_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Modifier"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#STATUS"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Lymphocytes_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:ID="PROCEDURE_TYPE">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#MODIFIERS"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Two_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Cohesive_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Tumor_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Atypia_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Melanophage_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Deep_margin">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Margin"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Prognostic"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Deep_word"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Tumor_regression">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#PROGNOSTIC_FINDINGS"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Prognostic"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Tumor_word"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Regression_word"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Punch">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Punch_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Modifier"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#PROCEDURE_TYPE"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Small_cells">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Small_word"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Cell_word"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Cell_type"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Diagnostic"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Cell_word"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Small_word"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Epidermis_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#pN1_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:ID="pN1b_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:ID="pT_stage">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Cancer_staging"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Hyperpigmentation">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#OTHER_FEATURES"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Hyperpigmentation_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Diagnostic"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Rete_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Margin">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#PROGNOSTIC_FINDINGS"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Prognostic"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Margin_word"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Lentigine_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Clarks_level_3">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Three_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Clarks_level"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Clarks_level">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#PROGNOSTIC_FINDINGS"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Level_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Clarks_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Prognostic"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="pT1a">
+    <rdfs:subClassOf rdf:resource="#pT1a_word"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="pT1"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="pM1b">
+    <rdfs:subClassOf rdf:resource="#pM1b_word"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="pM1"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Level_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Epidermis">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LOCATION"/>
+    <rdfs:subClassOf rdf:resource="#Epidermis_word"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Locative"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="pT2_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Melanocytic_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Shave">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Shave_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Modifier"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#PROCEDURE_TYPE"/>
+  </owl:Class>
+  <owl:Class rdf:ID="pN3">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#pN_stage"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#pN3_word"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Prognostic"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Number_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Nests">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#ARCHITECTURAL_FEATURES"/>
+    <rdfs:subClassOf rdf:resource="#Nest_word"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Diagnostic"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NNP"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Melanoma_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Dermis">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LOCATION"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Dermis_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Locative"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="pM1a_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Spread_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Oval_cells">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Oval_word"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Cell_word"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Cell_type"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Diagnostic"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NNP"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Cell_word"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Oval_word"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Ulceration_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:ID="pT0">
+    <rdfs:subClassOf rdf:resource="#pT_stage"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="pT0_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Prognostic"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="pM1c">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="pM1c_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#pM1"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="MALIGNANT_MELANOMA">
+    <rdfs:subClassOf rdf:resource="#Melanoma_word"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Malignant_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Disease"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="MALIGNANT_MELANOCYTIC_LESION"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Nevus_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Clarks_level_2">
+    <rdfs:subClassOf rdf:resource="#Two_word"/>
+    <rdfs:subClassOf rdf:resource="#Clarks_level"/>
+  </owl:Class>
+  <owl:Class rdf:ID="NEVUS_OF_ACRAL_SKIN">
+    <rdfs:subClassOf rdf:resource="#Skin_word"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Acral_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Nevus_word"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Disease"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#MELANOCYTIC_NEVUS"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasDisease"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Acral_skin"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasAttribute"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#MELANOCYTIC_NEVUS"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Enlarged_nests_at_dermoepidermal_junction"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Minimal_pagetoid_spread"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Lentiginous_proliferation_of_melanocytes"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+              <owl:Restriction>
+                <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+                <owl:someValuesFrom>
+                  <owl:Class rdf:ID="Minimal_inflammatory_infiltrate"/>
+                </owl:someValuesFrom>
+              </owl:Restriction>
+              <owl:Restriction>
+                <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasAbsentFinding"/>
+                <owl:someValuesFrom>
+                  <owl:Class rdf:about="#Inflammatory_infiltrate"/>
+                </owl:someValuesFrom>
+              </owl:Restriction>
+            </owl:unionOf>
+          </owl:Class>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="#Inferior_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="pM_stage">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Cancer_staging"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Uninvolved_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="pN2">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#pN_stage"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Prognostic"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="pN2_word"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Melanotic_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="pN2c">
+    <rdfs:subClassOf rdf:resource="#pN2c_word"/>
+    <rdfs:subClassOf rdf:resource="#pN2"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Procedure">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#PROGNOSTIC_FINDINGS"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Dermoepidermal_junction">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom rdf:resource="#Dermoepidermal_word"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Junction_word"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LOCATION"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Locative"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Junction_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Dermoepidermal_word"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Dendritic_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Melanophages">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#OTHER_FEATURES"/>
+    <rdfs:subClassOf rdf:resource="#Melanophage_word"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Cell_type"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Diagnostic"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NNP"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Hyperpigmentation_of_epidermis">
+    <rdfs:subClassOf rdf:resource="#Epidermis_word"/>
+    <rdfs:subClassOf rdf:resource="#Hyperpigmentation"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom rdf:resource="#Hyperpigmentation"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom rdf:resource="#Epidermis_word"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="Maturation">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#ARCHITECTURAL_FEATURES"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Maturation_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Diagnostic"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="pT2a_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Enlarged_nests_at_dermoepidermal_junction">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Nests_at_dermoepidermal_junction"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Enlarged_word"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Enlarged_word"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom rdf:resource="#Nests"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom rdf:resource="#Dermoepidermal_junction"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="INVASIVE_MELANOMA">
+    <rdfs:subClassOf rdf:resource="#Melanoma_word"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Invasive_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Disease"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#MALIGNANT_MELANOMA"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Vertical_growth_phase">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#PROGNOSTIC_FINDINGS"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Vertical_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Growth_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Phase_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Prognostic"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#pM1">
+    <rdfs:subClassOf rdf:resource="#pM_stage"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Prognostic"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="pM1_word"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Clarks_level_5">
+    <rdfs:subClassOf rdf:resource="#Five_word"/>
+    <rdfs:subClassOf rdf:resource="#Clarks_level"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Clarks_level_1">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="One_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Clarks_level"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Oval_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Lentiginous_proliferation_of_melanocytes">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Lentiginous_word"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Proliferation"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Melanocyte_word"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="#Melanocyte_word"/>
+    <rdfs:subClassOf rdf:resource="#Proliferation"/>
+    <rdfs:subClassOf rdf:resource="#Lentiginous_word"/>
+  </owl:Class>
+  <owl:Class rdf:about="#CIRCUMSCRIPTION">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#MODIFIERS"/>
+  </owl:Class>
+  <owl:Class rdf:ID="pN2b_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Nests_at_dermoepidermal_junction">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Nests"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom rdf:resource="#Dermoepidermal_junction"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="#Dermoepidermal_junction"/>
+    <rdfs:subClassOf rdf:resource="#Nests"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Balloon_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Acral_skin">
+    <rdfs:subClassOf rdf:resource="#Skin_word"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Acral_word"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Intradermal_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="pT4a">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="pT4a_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#pT4"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Infiltrate_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Malignant_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Site_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="pT1b">
+    <rdfs:subClassOf rdf:resource="#pT1b_word"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#pT1"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="pM1a">
+    <rdfs:subClassOf rdf:resource="#pM1a_word"/>
+    <rdfs:subClassOf rdf:resource="#pM1"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Clarks_level_4">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Four_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Clarks_level"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Marked_inflammatory_infiltrate">
+    <rdfs:subClassOf rdf:resource="#Marked_word"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Inflammatory_infiltrate"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Marked_word"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Inflammatory_infiltrate"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="#MALIGNANT_MELANOCYTIC_LESION">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Lesion_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Melanocytic_word"/>
+    <rdfs:subClassOf rdf:resource="#Malignant_word"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Disease"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="MELANOCYTIC_LESION"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Lateral_margin_indeterminate">
+    <rdfs:subClassOf rdf:resource="#Lateral_margin"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Indeterminate_word"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Lateral_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="pN1a_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Increased_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Brisk_tumor_infiltrating_lymphocytes">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Brisk_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Tumor_infiltrating_lymphocytes"/>
+  </owl:Class>
+  <owl:Class rdf:about="#pT2b_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:ID="SUPERFICIAL_SPREADING_MELANOMA">
+    <rdfs:subClassOf rdf:resource="#Melanoma_word"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Spreading_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Superficial_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Disease"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#MALIGNANT_MELANOMA"/>
+  </owl:Class>
+  <owl:Class rdf:ID="pTis">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="pTis_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Prognostic"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#pT_stage"/>
+  </owl:Class>
+  <owl:Class rdf:ID="pT3">
+    <rdfs:subClassOf rdf:resource="#pT_stage"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Prognostic"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="pT3_word"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Infiltrating_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Nodule_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Punch_biopsy">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Punch_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Biopsy"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#MELANOCYTIC_NEVUS">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Disease"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Nevus_word"/>
+    <rdfs:subClassOf rdf:resource="#Melanocytic_word"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#BENIGN_MELANOCYTIC_LESION"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Symmetrical_lesion"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Well-circumscribed_lesion"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Uniformly_arranged_nests"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Cohesive_nests"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="Mild">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Mild_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Modifier"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#SEVERITY"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Proliferation_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Mitotic_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:about="#pM1_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Superficial_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Inflammatory_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="pN2a">
+    <rdfs:subClassOf rdf:resource="#pN2a_word"/>
+    <rdfs:subClassOf rdf:resource="#pN2"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Normal_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Epithelioid_cells">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Cell_type"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Diagnostic"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NNP"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Cell_word"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Epithelioid_word"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Epithelioid_word"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Cell_word"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="#pN2_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:about="#pN_stage">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Cancer_staging"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="pTX">
+    <rdfs:subClassOf rdf:resource="#pT_stage"/>
+    <rdfs:subClassOf rdf:resource="#pTX_word"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Prognostic"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Decreased_number_of_basilar_melanocytes">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Decreased_word"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom rdf:resource="#Number_word"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Basilar_melanocytes"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Basilar_melanocytes"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Number_word"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Decreased_word"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#pT4a_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:about="#pT4">
+    <rdfs:subClassOf rdf:resource="#pT_stage"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Prognostic"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#pT4_word"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Mild_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Symmetrical_lesion">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Symmetrical_word"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Lesion_word"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#ARCHITECTURAL_FEATURES"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Lesion_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Symmetrical_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Diagnostic"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Macule_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Pigmentation">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#PROGNOSTIC_FINDINGS"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Prognostic"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Pigmentation_word"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Growth_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Cancer_staging">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#WORKSHEET"/>
+  </owl:Class>
+  <owl:Class rdf:ID="pN2b">
+    <rdfs:subClassOf rdf:resource="#pN2b_word"/>
+    <rdfs:subClassOf rdf:resource="#pN2"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Well-circumscribed_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#pN0_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Dermis_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="MELANOMA_IN-SITU_AND_INVASIVE">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Invasive_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="In-situ_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Melanoma_word"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Disease"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#MALIGNANT_MELANOMA"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Mitotic_index">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Index_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Mitotic_word"/>
+  </owl:Class>
+  <owl:Class rdf:ID="pMX">
+    <rdfs:subClassOf rdf:resource="#pM_stage"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="pMX_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Prognostic"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Marked_tumor_infiltrating_lymphocytes">
+    <rdfs:subClassOf rdf:resource="#Marked_word"/>
+    <rdfs:subClassOf rdf:resource="#Tumor_infiltrating_lymphocytes"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Invasion_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Vertical_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Minimal_inflammatory_infiltrate">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Inflammatory_infiltrate"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Minimal_word"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Minimal_word"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Inflammatory_infiltrate"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="#pT1">
+    <rdfs:subClassOf rdf:resource="#pT_stage"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Prognostic"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#pT1_word"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Moderate_tumor_infiltrating_lymphocytes">
+    <rdfs:subClassOf rdf:resource="#Moderate_word"/>
+    <rdfs:subClassOf rdf:resource="#Tumor_infiltrating_lymphocytes"/>
+  </owl:Class>
+  <owl:Class rdf:ID="MELANOMA_IN-SITU">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#In-situ_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Melanoma_word"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Disease"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#MALIGNANT_MELANOMA"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Severe_cytologic_atypia">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Severe_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Cytologic_atypia"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Basilar_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#pT0_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Dendritic">
+    <rdfs:subClassOf rdf:resource="#Dendritic_word"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Modifier"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#SHAPE"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Atypical_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="pN1b">
+    <rdfs:subClassOf rdf:resource="#pN1b_word"/>
+    <rdfs:subClassOf rdf:resource="#pN1"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Cohesive_nests">
+    <rdfs:subClassOf rdf:resource="#Cohesive_word"/>
+    <rdfs:subClassOf rdf:resource="#Nests"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom rdf:resource="#Cohesive_word"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Nests"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="#Spindle_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Arranged_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#VBD"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Basilar_melanocytes">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LOCATION"/>
+    <rdfs:subClassOf rdf:resource="#Melanocyte_word"/>
+    <rdfs:subClassOf rdf:resource="#Basilar_word"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Locative"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Diagnostic"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NNP"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Cell_type"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Basilar_word"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom rdf:resource="#Melanocyte_word"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="Cohesive">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#MODIFIERS"/>
+    <rdfs:subClassOf rdf:resource="#Cohesive_word"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Modifier"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Punch_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#pT2">
+    <rdfs:subClassOf rdf:resource="#pT_stage"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Prognostic"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#pT2_word"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Depth_of_invasion">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#PROGNOSTIC_FINDINGS"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Prognostic"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Invasion_word"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Depth_word"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Perineural_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:ID="SIZE">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#MODIFIERS"/>
+  </owl:Class>
+  <owl:Class rdf:about="#STATUS">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#MODIFIERS"/>
+  </owl:Class>
+  <owl:Class rdf:about="#pNX_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Solar_elastosis">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#PROGNOSTIC_FINDINGS"/>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#OTHER_FEATURES"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Prognostic"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Diagnostic"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Elastosis_word"/>
+    <rdfs:subClassOf rdf:resource="#Solar_word"/>
+  </owl:Class>
+  <owl:Class rdf:about="#One_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:ID="MELANOTIC_LENTIGINE_OF_MUCOCUTANEOUS_SITE">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom rdf:resource="#Acanthosis_of_epidermis"/>
+          </owl:Restriction>
+          <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+              <owl:Restriction>
+                <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+                <owl:someValuesFrom>
+                  <owl:Class rdf:about="#Elongated_rete"/>
+                </owl:someValuesFrom>
+              </owl:Restriction>
+              <owl:Restriction>
+                <owl:someValuesFrom>
+                  <owl:Class rdf:about="#Elongated_rete"/>
+                </owl:someValuesFrom>
+                <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasAbsentFinding"/>
+              </owl:Restriction>
+            </owl:unionOf>
+          </owl:Class>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Increased_number_of_basilar_melanocytes"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="#Site_word"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Mucocutaneous_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Lentigine_word"/>
+    <rdfs:subClassOf rdf:resource="#Melanotic_word"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Disease"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#BENIGN_MELANOCYTIC_LESION"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Epithelioid_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Maturation_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Mild_cytologic_atypia">
+    <rdfs:subClassOf rdf:resource="#Mild_word"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Cytologic_atypia"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Spreading_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="pN1a">
+    <rdfs:subClassOf rdf:resource="#pN1a_word"/>
+    <rdfs:subClassOf rdf:resource="#pN1"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Minimal_pagetoid_spread">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Pagetoid_spread"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Minimal_word"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Minimal_word"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Pagetoid_spread"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="#Shave_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Dendritic_cells">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom rdf:resource="#Dendritic_word"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Cell_word"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Cell_type"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Diagnostic"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Cell_word"/>
+    <rdfs:subClassOf rdf:resource="#Dendritic_word"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Deep_margin_involved">
+    <rdfs:subClassOf rdf:resource="#Deep_margin"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Involved_word"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Uniformly">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#MODIFIERS"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Uniformly_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Modifier"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Minimal">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Minimal_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Modifier"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Non-brisk"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Severe_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:about="#SYMMETRY">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#MODIFIERS"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Elongated_rete">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Rete"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Elongated_word"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Elongated_word"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Rete"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="#Small_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="UNITS">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#MODIFIERS"/>
+  </owl:Class>
+  <owl:Class rdf:ID="SOLAR_LENTIGO">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Increased_number_of_basilar_melanocytes"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom rdf:resource="#Hyperpigmentation_of_epidermis"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom rdf:resource="#Elongated_rete"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Melanophages"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Solar_elastosis"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Disease"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Lentigo_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Solar_word"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#BENIGN_MELANOCYTIC_LESION"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Four_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Radial_growth_phase">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#PROGNOSTIC_FINDINGS"/>
+    <rdfs:subClassOf rdf:resource="#Radial_word"/>
+    <rdfs:subClassOf rdf:resource="#Growth_word"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Phase_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Prognostic"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Depth_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Index_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Uniformly_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#RB"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Mucocutaneous_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Excisional_biopsy">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Excisional_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Biopsy"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#SEVERITY">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#MODIFIERS"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Excisional_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Lesion_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="pT2a">
+    <rdfs:subClassOf rdf:resource="#pT2a_word"/>
+    <rdfs:subClassOf rdf:resource="#pT2"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Cell_type">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#CYTOLOGIC_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:ID="pT3a">
+    <rdfs:subClassOf rdf:resource="#pT3a_word"/>
+    <rdfs:subClassOf rdf:resource="#pT3"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Millimeter">
+    <rdfs:subClassOf rdf:resource="#UNITS"/>
+    <rdfs:subClassOf rdf:resource="#Millimeter_word"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Increased_number_of_basilar_melanocytes">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Increased_word"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom rdf:resource="#Number_word"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom rdf:resource="#Basilar_melanocytes"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="#Basilar_melanocytes"/>
+    <rdfs:subClassOf rdf:resource="#Number_word"/>
+    <rdfs:subClassOf rdf:resource="#Increased_word"/>
+  </owl:Class>
+  <owl:Class rdf:about="#BENIGN_MELANOCYTIC_LESION">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Benign_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Disease"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#MELANOCYTIC_LESION"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#pM1c_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Uniformly_arranged_nests">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Uniformly_word"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom rdf:resource="#Arranged_word"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom rdf:resource="#Nests"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="#Nests"/>
+    <rdfs:subClassOf rdf:resource="#Arranged_word"/>
+    <rdfs:subClassOf rdf:resource="#Uniformly_word"/>
+  </owl:Class>
+  <owl:Class rdf:ID="MELANOTIC_MACULE_OF_MUCOCUTANEOUS_SITE">
+    <rdfs:subClassOf rdf:resource="#Site_word"/>
+    <rdfs:subClassOf rdf:resource="#Mucocutaneous_word"/>
+    <rdfs:subClassOf rdf:resource="#Macule_word"/>
+    <rdfs:subClassOf rdf:resource="#Melanotic_word"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Disease"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#BENIGN_MELANOCYTIC_LESION"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom rdf:resource="#Acanthosis_of_epidermis"/>
+          </owl:Restriction>
+          <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+              <owl:Restriction>
+                <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+                <owl:someValuesFrom rdf:resource="#Elongated_rete"/>
+              </owl:Restriction>
+              <owl:Restriction>
+                <owl:someValuesFrom rdf:resource="#Elongated_rete"/>
+                <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasAbsentFinding"/>
+              </owl:Restriction>
+            </owl:unionOf>
+          </owl:Class>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasAbsentFinding"/>
+            <owl:someValuesFrom rdf:resource="#Increased_number_of_basilar_melanocytes"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="#Inflammatory_infiltrate">
+    <rdfs:subClassOf rdf:resource="#Infiltrate_word"/>
+    <rdfs:subClassOf rdf:resource="#Inflammatory_word"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Inflammatory_word"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Infiltrate_word"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="#Well-circumscribed_lesion">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#ARCHITECTURAL_FEATURES"/>
+    <rdfs:subClassOf rdf:resource="#Lesion_word"/>
+    <rdfs:subClassOf rdf:resource="#Well-circumscribed_word"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Diagnostic"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom rdf:resource="#Well-circumscribed_word"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom rdf:resource="#Lesion_word"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="#Brisk_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Junction_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Regression_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Minimal_tumor_infiltrating_lymphocytes">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Minimal_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Tumor_infiltrating_lymphocytes"/>
+  </owl:Class>
+  <owl:Class rdf:about="#SHAPE">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#MODIFIERS"/>
+  </owl:Class>
+  <owl:Class rdf:about="#pT3_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Pagetoid_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Three_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Involved_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Phase_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Non-brisk_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Ulceration">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#PROGNOSTIC_FINDINGS"/>
+    <rdfs:subClassOf rdf:resource="#Ulceration_word"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Prognostic"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Brisk">
+    <rdfs:subClassOf rdf:resource="#Brisk_word"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Modifier"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#QUANTITY"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Lateral_margin_uninvolved">
+    <rdfs:subClassOf rdf:resource="#Lateral_margin"/>
+    <rdfs:subClassOf rdf:resource="#Uninvolved_word"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Moderate_cytologic_atypia">
+    <rdfs:subClassOf rdf:resource="#Moderate_word"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Cytologic_atypia"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Round_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Satellite_nodule">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#PROGNOSTIC_FINDINGS"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Prognostic"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Satellite_word"/>
+    <rdfs:subClassOf rdf:resource="#Nodule_word"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Vascular_invasion">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#PROGNOSTIC_FINDINGS"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Prognostic"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Vascular_word"/>
+    <rdfs:subClassOf rdf:resource="#Invasion_word"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Symmetrical_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Minimal_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Involved">
+    <rdfs:subClassOf rdf:resource="#Involved_word"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Modifier"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#STATUS"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Elongated_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Clarks_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Cytologic_atypia">
+    <rdfs:subClassOf rdf:resource="#Atypia_word"/>
+    <rdfs:subClassOf rdf:resource="#Cytologic_word"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Acral_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Perineural_invasion">
+    <rdfs:subClassOf rdf:resource="#Invasion_word"/>
+    <rdfs:subClassOf rdf:resource="#Perineural_word"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Indeterminate_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Junctional_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Depth_of_invasion_numeric_mm">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Numeric_word"/>
+    <rdfs:subClassOf rdf:resource="#Millimeter_word"/>
+    <rdfs:subClassOf rdf:resource="#Depth_of_invasion"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Invasive_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Deep_margin_indeterminate">
+    <rdfs:subClassOf rdf:resource="#Deep_margin"/>
+    <rdfs:subClassOf rdf:resource="#Indeterminate_word"/>
+  </owl:Class>
+  <owl:Class rdf:about="#MELANOCYTIC_LESION">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#DISEASES"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Disease"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Lesion_word"/>
+    <rdfs:subClassOf rdf:resource="#Melanocytic_word"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Re-excision">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Prognostic"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Procedure"/>
+    <rdfs:subClassOf rdf:resource="#Re-excision_word"/>
+  </owl:Class>
+  <owl:Class rdf:about="#In-situ_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="COMPOUND_NEVUS">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+              <owl:Restriction>
+                <owl:someValuesFrom rdf:resource="#Nests_at_dermoepidermal_junction"/>
+                <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+              </owl:Restriction>
+              <owl:Restriction>
+                <owl:someValuesFrom rdf:resource="#Lentiginous_proliferation_of_melanocytes"/>
+                <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+              </owl:Restriction>
+            </owl:unionOf>
+          </owl:Class>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom rdf:resource="#Nests_in_dermis"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="#Nevus_word"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Compound_word"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Disease"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#MELANOCYTIC_NEVUS"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Biopsy_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Hyperpigmentation_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:ID="pT3b_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Lateral_margin_involved">
+    <rdfs:subClassOf rdf:resource="#Lateral_margin"/>
+    <rdfs:subClassOf rdf:resource="#Involved_word"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Rete">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#ARCHITECTURAL_FEATURES"/>
+    <rdfs:subClassOf rdf:resource="#Rete_word"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Diagnostic"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NNP"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Benign_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Excisional">
+    <rdfs:subClassOf rdf:resource="#Excisional_word"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Modifier"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#PROCEDURE_TYPE"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Solar_keratosis">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#PROGNOSTIC_FINDINGS"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Prognostic"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Solar_word"/>
+    <rdfs:subClassOf rdf:resource="#Keratosis_word"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Biopsy">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Prognostic"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Procedure"/>
+    <rdfs:subClassOf rdf:resource="#Biopsy_word"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Pagetoid_spread">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#ARCHITECTURAL_FEATURES"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Diagnostic"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Pagetoid_word"/>
+    <rdfs:subClassOf rdf:resource="#Spread_word"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom rdf:resource="#Pagetoid_word"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom rdf:resource="#Spread_word"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="#Compound_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Preserved_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ATYPICAL_MELANOCYTIC_LESION">
+    <rdfs:subClassOf rdf:resource="#Atypical_word"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Disease"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#MELANOCYTIC_LESION"/>
+  </owl:Class>
+  <owl:Class rdf:ID="NEVUS_TYPE">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#MODIFIERS"/>
+  </owl:Class>
+  <owl:Class rdf:about="#pMX_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Normal_number_of_basilar_melanocytes">
+    <rdfs:subClassOf rdf:resource="#Basilar_melanocytes"/>
+    <rdfs:subClassOf rdf:resource="#Number_word"/>
+    <rdfs:subClassOf rdf:resource="#Normal_word"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom rdf:resource="#Normal_word"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom rdf:resource="#Number_word"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom rdf:resource="#Basilar_melanocytes"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="#Lentigo_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Round_cells">
+    <rdfs:subClassOf rdf:resource="#Cell_type"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Diagnostic"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Cell_word"/>
+    <rdfs:subClassOf rdf:resource="#Round_word"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Small">
+    <rdfs:subClassOf rdf:resource="#Small_word"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Modifier"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#SIZE"/>
+  </owl:Class>
+  <owl:Class rdf:about="#pTis_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Decreased_word">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Skin">
+    <rdfs:subClassOf rdf:resource="#Skin_word"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Prognostic"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Tissue"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Tissue">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#PROGNOSTIC_FINDINGS"/>
+  </owl:Class>
+  <owl:Class rdf:ID="pT3b">
+    <rdfs:subClassOf rdf:resource="#pT3b_word"/>
+    <rdfs:subClassOf rdf:resource="#pT3"/>
+  </owl:Class>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.4, Build 519)  http://protege.stanford.edu -->

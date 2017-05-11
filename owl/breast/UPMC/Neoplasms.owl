@@ -1,0 +1,650 @@
+<rdf:RDF
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:knowledgebase="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#">
+  <owl:Ontology rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl">
+    <owl:imports rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl"/>
+  </owl:Ontology>
+  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Nuclei">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >nuclei</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#CYTOLOGIC_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#CRIBRIFORM_CARCINOMA">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CRIBRIFORM CARCINOMA</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#CARCINOMA"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Marked">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#MODIFIERS"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Syncytial">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#MODIFIERS"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#HYPERPLASIA">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >HYPERPLASIA</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#DIAGNOSES"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Inflammatory_Infiltrate">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >inflammatory infiltrate</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#ARCHITECTURAL_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Moderate_Lymphoplasmacytic_Inflammatory_Infiltrate">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >moderate lymphoplasmacytic inflammatory infiltrate</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Moderate"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Lymphoplasmacytic_Inflammatory_Infiltrate"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#PAGET_DISEASE">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >PAGET DISEASE</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#DIAGNOSES"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Variable">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#MODIFIERS"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#TUBULAR_CARCINOMA">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >TUBULAR CARCINOMA</rdfs:label>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Angulated_Tubules"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Single_Layer_of_Epithelial_Cells"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#CARCINOMA"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Angulated">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#MODIFIERS"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Cell_Types">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >cell types</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#CYTOLOGIC_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Lymphoplasmacytic_Inflammatory_Infiltrate">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >lymphoplasmacytic inflammatory infiltrate</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Lymphoplasmacytic"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Inflammatory_Infiltrate"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Oval_Nuclei">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >oval nuclei</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Oval"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Nuclei"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#APOCRINE_CARCINOMA">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >APOCRINE CARCINOMA</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#CARCINOMA"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Marked_Lymphoplasmacytic_Inflammatory_Infiltrate">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >marked lymphoplasmacytic inflammatory infiltrate</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Marked"/>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Lymphoplasmacytic_Inflammatory_Infiltrate"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#LOBULAR_CARCINOMA_IN_SITU">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >LOBULAR CARCINOMA IN SITU</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#CARCINOMA"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Lymphoplasmacytic">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#MODIFIERS"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Minimal">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#MODIFIERS"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Oval">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#MODIFIERS"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#MUCINOUS_CARCINOMA">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MUCINOUS CARCINOMA</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#CARCINOMA"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Single_Layer_of_Epithelial_Cells">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >single layer of epithelial cells</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Single_Layer_of"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Epithelial_Cells"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Glandular_Structures">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >glandular structures</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#ARCHITECTURAL_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Trabeculae">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#MODIFIERS"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#INVASIVE_LOBULAR_CARCINOMA">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >INVASIVE LOBULAR CARCINOMA</rdfs:label>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Dyscohesive_Pattern_of_Infiltration"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Oval_Nuclei"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Minimal_Cytoplasm"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#CARCINOMA"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Border">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >border</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#ARCHITECTURAL_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Minimal_Cytoplasm">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >minimal cytoplasm</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Minimal"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Cytoplasm"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Well-circumscribed_Border">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >well-circumscribed border</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Well-circumscribed"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Border"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Nuclear_Pleomorphism">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >nuclear pleomorphism</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#CYTOLOGIC_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#ADENOID_CYSTIC_CARCINOMA">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ADENOID CYSTIC CARCINOMA</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#CARCINOMA"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Single_Layer_of">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#MODIFIERS"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#ADENOMA">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ADENOMA</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#DIAGNOSES"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#CARCINOMA">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CARCINOMA</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#DIAGNOSES"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Dyscohesive_Pattern_of_Infiltration">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >dyscohesive pattern of infiltration</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Dyscohesive_Pattern_of"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Infiltration"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Sheet-like_Growth_Pattern">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >sheet-like growth pattern</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Sheet-like"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Growth_Pattern"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Trabeculae_Growth_Pattern">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >trabeculae growth pattern</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Trabeculae"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Growth_Pattern"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Dyscohesive_Pattern_of">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#MODIFIERS"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Sheet-like">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#MODIFIERS"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Moderate_Nuclear_Pleomorphism">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >moderate nuclear pleomorphism</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Moderate"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Nuclear_Pleomorphism"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#SARCOMA">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >SARCOMA</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#DIAGNOSES"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Cytologic_Atypia">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >cytologic atypia</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#CYTOLOGIC_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Moderate">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#MODIFIERS"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Marked_Nuclear_Pleomorphism">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >marked nuclear pleomorphism</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Marked"/>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Nuclear_Pleomorphism"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Cytoplasm">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >cytoplasm</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#CYTOLOGIC_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#DUCTAL_CARCINOMA_IN_SITU">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >DUCTAL CARCINOMA IN SITU</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#CARCINOMA"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#SECRETORY_CARCINOMA">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >SECRETORY CARCINOMA</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#CARCINOMA"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Syncytial_Growth_Pattern">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >syncytial growth pattern</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Syncytial"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Growth_Pattern"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#INVASIVE_DUCTAL_CARCINOMA">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >INVASIVE DUCTAL CARCINOMA</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#CARCINOMA"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Growth_Pattern">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >growth pattern</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#ARCHITECTURAL_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#NONINVASIVE_CARCINOMA">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >NONINVASIVE CARCINOMA</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#CARCINOMA"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#MEDULLARY_CARCINOMA">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MEDULLARY CARCINOMA</rdfs:label>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Syncytial_Growth_Pattern"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Glandular_Structures"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#hasAbsentFinding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Moderate_Lymphoplasmacytic_Inflammatory_Infiltrate"/>
+                  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Marked_Lymphoplasmacytic_Inflammatory_Infiltrate"/>
+                </owl:unionOf>
+              </owl:Class>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Well-circumscribed_Border"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Marked_Nuclear_Pleomorphism"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#CARCINOMA"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Epithelial_Cells">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >epithelial cells</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Cell_Types"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Tubules">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >tubules</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#ARCHITECTURAL_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#INVASIVE_CARCINOMA">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >INVASIVE CARCINOMA</rdfs:label>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Trabeculae_Growth_Pattern"/>
+                  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Sheet-like_Growth_Pattern"/>
+                </owl:unionOf>
+              </owl:Class>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Variable_Cytologic_Atypia"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#CARCINOMA"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Infiltration">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >infiltration</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#ARCHITECTURAL_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Angulated_Tubules">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >angulated tubules</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Angulated"/>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Tubules"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Variable_Cytologic_Atypia">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >variable cytologic atypia</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Variable"/>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Cytologic_Atypia"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#PAPILLARY_CARCINOMA">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >PAPILLARY CARCINOMA</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#CARCINOMA"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Well-circumscribed">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#MODIFIERS"/>
+  </owl:Class>
+  <rdf:List>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        <rdf:first rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#DIAGNOSES"/>
+      </rdf:List>
+    </rdf:rest>
+    <rdf:first rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#CASES"/>
+  </rdf:List>
+  <rdf:List>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        <rdf:first>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Variable_Cytologic_Atypia"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+        </rdf:first>
+      </rdf:List>
+    </rdf:rest>
+    <rdf:first>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+              <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Trabeculae_Growth_Pattern"/>
+              <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Sheet-like_Growth_Pattern"/>
+            </owl:unionOf>
+          </owl:Class>
+        </owl:someValuesFrom>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#hasFinding"/>
+      </owl:Restriction>
+    </rdf:first>
+  </rdf:List>
+  <rdf:List>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        <rdf:first rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Marked_Lymphoplasmacytic_Inflammatory_Infiltrate"/>
+      </rdf:List>
+    </rdf:rest>
+    <rdf:first rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Moderate_Lymphoplasmacytic_Inflammatory_Infiltrate"/>
+  </rdf:List>
+  <rdf:List>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        <rdf:first rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#FINDINGS"/>
+      </rdf:List>
+    </rdf:rest>
+    <rdf:first rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#DIAGNOSES"/>
+  </rdf:List>
+  <rdf:List>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:rest>
+          <rdf:List>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            <rdf:first>
+              <owl:Restriction>
+                <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Minimal_Cytoplasm"/>
+                <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#hasFinding"/>
+              </owl:Restriction>
+            </rdf:first>
+          </rdf:List>
+        </rdf:rest>
+        <rdf:first>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Oval_Nuclei"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+        </rdf:first>
+      </rdf:List>
+    </rdf:rest>
+    <rdf:first>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Dyscohesive_Pattern_of_Infiltration"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#hasFinding"/>
+      </owl:Restriction>
+    </rdf:first>
+  </rdf:List>
+  <rdf:List>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        <rdf:first>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Single_Layer_of_Epithelial_Cells"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+        </rdf:first>
+      </rdf:List>
+    </rdf:rest>
+    <rdf:first>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Angulated_Tubules"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#hasFinding"/>
+      </owl:Restriction>
+    </rdf:first>
+  </rdf:List>
+  <rdf:List>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        <rdf:first rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Sheet-like_Growth_Pattern"/>
+      </rdf:List>
+    </rdf:rest>
+    <rdf:first rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Trabeculae_Growth_Pattern"/>
+  </rdf:List>
+  <rdf:List>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        <rdf:first rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#CASES"/>
+      </rdf:List>
+    </rdf:rest>
+    <rdf:first rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#TEMPLATES"/>
+  </rdf:List>
+  <rdf:List>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        <rdf:first rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#DIAGNOSES"/>
+      </rdf:List>
+    </rdf:rest>
+    <rdf:first rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#CASES"/>
+  </rdf:List>
+  <rdf:List>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:rest>
+          <rdf:List>
+            <rdf:rest>
+              <rdf:List>
+                <rdf:rest>
+                  <rdf:List>
+                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    <rdf:first>
+                      <owl:Restriction>
+                        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Marked_Nuclear_Pleomorphism"/>
+                        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#hasFinding"/>
+                      </owl:Restriction>
+                    </rdf:first>
+                  </rdf:List>
+                </rdf:rest>
+                <rdf:first>
+                  <owl:Restriction>
+                    <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Well-circumscribed_Border"/>
+                    <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#hasFinding"/>
+                  </owl:Restriction>
+                </rdf:first>
+              </rdf:List>
+            </rdf:rest>
+            <rdf:first>
+              <owl:Restriction>
+                <owl:someValuesFrom>
+                  <owl:Class>
+                    <owl:unionOf rdf:parseType="Collection">
+                      <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Moderate_Lymphoplasmacytic_Inflammatory_Infiltrate"/>
+                      <owl:Class rdf:about="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Marked_Lymphoplasmacytic_Inflammatory_Infiltrate"/>
+                    </owl:unionOf>
+                  </owl:Class>
+                </owl:someValuesFrom>
+                <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#hasFinding"/>
+              </owl:Restriction>
+            </rdf:first>
+          </rdf:List>
+        </rdf:rest>
+        <rdf:first>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Glandular_Structures"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#hasAbsentFinding"/>
+          </owl:Restriction>
+        </rdf:first>
+      </rdf:List>
+    </rdf:rest>
+    <rdf:first>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/breast/UPMC/Neoplasms.owl#Syncytial_Growth_Pattern"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#hasFinding"/>
+      </owl:Restriction>
+    </rdf:first>
+  </rdf:List>
+  <rdf:List>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        <rdf:first rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#DIAGNOSES"/>
+      </rdf:List>
+    </rdf:rest>
+    <rdf:first rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#CASES"/>
+  </rdf:List>
+  <rdf:List>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        <rdf:first rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#DIAGNOSES"/>
+      </rdf:List>
+    </rdf:rest>
+    <rdf:first rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#CASES"/>
+  </rdf:List>
+  <rdf:List>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        <rdf:first rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#DIAGNOSES"/>
+      </rdf:List>
+    </rdf:rest>
+    <rdf:first rdf:resource="http://slidetutor.upmc.edu/curriculum/owl/KnowledgeBase.owl#PROGNOSTIC_FINDINGS"/>
+  </rdf:List>
+</rdf:RDF>

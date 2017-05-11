@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="src" path="src/main/web/test/src"/>
+	<classpathentry kind="src" path="src/main/resources"/>
+	<classpathentry kind="lib" path="lib/jdom.jar"/>
+	<classpathentry kind="lib" path="lib/servlet-2_3.jar"/>
+	<classpathentry kind="lib" path="lib/SlideViewer.jar"/>
+	<classpathentry kind="lib" path="lib/spacetree-m.jar"/>
+	<classpathentry kind="lib" path="lib/specialistTextTools.jar"/>
+	<classpathentry kind="lib" path="lib/TextTools.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/protege-owl-inference.jar"/>
+	<classpathentry kind="lib" path="lib/protege-owl.jar"/>
+	<classpathentry kind="lib" path="lib/protege.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

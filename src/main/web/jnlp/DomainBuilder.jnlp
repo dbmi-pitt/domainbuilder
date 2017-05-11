@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<jnlp spec="1.0+" codebase="http://1upmc-opi-xip02.upmc.edu:92/domainbuilder">
+	<information> 
+		<title>DomainBuilder</title> 
+		<vendor>University of Pittsburgh</vendor> 
+		<description>SlideTutor Domain Authoring System</description> 
+		<description kind="short">DomainBuilder</description> 
+		<offline-allowed/>
+	</information>
+	<security>
+       		<all-permissions/>
+    	</security>
+	<resources>
+		<j2se version="1.5+" max-heap-size="384m"/>
+		<jar href="lib/DomainBuilder.jar"/>
+		<jar href="lib/SlideViewer.jar"/>
+		<jar href="lib/PathTutor.jar"/>
+		<jar href="lib/xippix.jar"/>
+		<jar href="lib/spacetree-m.jar"/>		<jar href="lib/jdom.jar"/>
+		<jar href="lib/TextTools.jar"/>
+		<jar href="lib/specialistTextTools.jar"/>
+		<jar href="lib/lucene-analyzers-2.4.0.jar"/>
+		<jar href="lib/lucene-core-2.4.0.jar"/>
+		<jar href="lib/vjdbc.jar"/>
+		<jar href="lib/mysql-connector-java-5.0.6-bin.jar"/>
+		<jar href="lib/commons-logging-1.1.jar"/>
+		<jar href="lib/protege/protege.jar"/>
+		<jar href="lib/protege/owl/concurrent.jar"/>
+		<jar href="lib/protege/owl/icu4j_3_4.jar"/>
+		<jar href="lib/protege/owl/iri.jar"/>
+		<jar href="lib/protege/owl/jena.jar"/>
+		<jar href="lib/protege/owl/orphanNodesAlg.jar"/>
+		<jar href="lib/protege/owl/protege-owl.jar"/>
+		<jar href="lib/protege/owl/xercesImpl.jar"/>
+		<jar href="lib/protege/pellet/owlapi-api.jar"/>
+		<jar href="lib/protege/pellet/owlapi-apibinding.jar"/>
+		<jar href="lib/protege/pellet/owlapi-functionalparser.jar"/>
+		<jar href="lib/protege/pellet/owlapi-functionalrenderer.jar"/>
+		<jar href="lib/protege/pellet/owlapi-impl.jar"/>
+		<jar href="lib/protege/pellet/owlapi-krssparser.jar"/>
+		<jar href="lib/protege/pellet/owlapi-oboparser.jar"/>
+		<jar href="lib/protege/pellet/owlapi-owlxmlparser.jar"/>
+		<jar href="lib/protege/pellet/owlapi-owlxmlrenderer.jar"/>
+		<jar href="lib/protege/pellet/owlapi-rdfxmlparser.jar"/>
+		<jar href="lib/protege/pellet/pellet.jar"/>
+		<jar href="lib/protege/pellet/protege-pellet.jar"/>
+		<jar href="lib/protege/pellet/relaxngDatatype.jar"/>
+		<jar href="lib/protege/pellet/xsdlib.jar"/>
+	</resources>
+
+	<application-desc main-class="edu.pitt.dbmi.domainbuilder.DomainBuilder">
+		<argument> -server = http://1upmc-opi-xip02.upmc.edu:92/domainbuilder</argument> 		
+	</application-desc>
+</jnlp> 
+
+
+

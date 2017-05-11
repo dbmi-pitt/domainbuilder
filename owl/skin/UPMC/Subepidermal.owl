@@ -1,0 +1,3608 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:kb="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns="http://slidetutor.upmc.edu/domainbuilder/owl/skin/UPMC/Subepidermal.owl#"
+  xml:base="http://slidetutor.upmc.edu/domainbuilder/owl/skin/UPMC/Subepidermal.owl">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl"/>
+  </owl:Ontology>
+  <owl:Class rdf:ID="Ballooning">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Diagnostic"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#CYTOLOGIC_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:ID="BLISTER_ABOVE_SCAR">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Subepidermal_blister"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Subepidermal_fibrosis"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+              <owl:Restriction>
+                <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+                <owl:someValuesFrom>
+                  <owl:Class rdf:ID="Minimal_lymphocytic_inflammatory_infiltrate_in_dermis"/>
+                </owl:someValuesFrom>
+              </owl:Restriction>
+              <owl:Restriction>
+                <owl:someValuesFrom>
+                  <owl:Class rdf:ID="Moderate_lymphocytic_inflammatory_infiltrate_in_dermis"/>
+                </owl:someValuesFrom>
+                <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+              </owl:Restriction>
+              <owl:Restriction>
+                <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+                <owl:someValuesFrom>
+                  <owl:Class rdf:ID="Marked_lymphocytic_inflammatory_infiltrate_in_dermis"/>
+                </owl:someValuesFrom>
+              </owl:Restriction>
+            </owl:unionOf>
+          </owl:Class>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="SUBEPIDERMAL_VESICULAR_DERMATITIS"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Wedge-shaped_hypergranulosis">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Wedge-shaped"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Hypergranulosis"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Hypergranulosis"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Wedge-shaped"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Papillary_dermis">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Dermis"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Locative"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="BULLOUS_AMYLOIDOSIS">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#SUBEPIDERMAL_VESICULAR_DERMATITIS"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Globule_of_amyloid_in_superficial_dermis"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Minimal_lymphocytic_inflammatory_infiltrate_in_dermis"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Subepidermal_blister"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="Moderate">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#MODIFIERS"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Fibrin">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Diagnostic"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#ARCHITECTURAL_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:ID="CELLULITIS">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Minimal_neutrophilic_inflammatory_infiltrate_in_reticular_dermis"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Marked_neutrophilic_inflammatory_infiltrate_in_subcutis"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Subepidermal_blister"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#SUBEPIDERMAL_VESICULAR_DERMATITIS"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="VARIEGATE_PORPHYRIA">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#SUBEPIDERMAL_VESICULAR_DERMATITIS"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Subepidermal_blister"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Perivenular_rims_of_homogenous_material"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Papillae_preserved"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom>
+              <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                  <owl:Class rdf:ID="Moderate_solar_elastosis"/>
+                  <owl:Class rdf:ID="Marked_solar_elastosis"/>
+                </owl:unionOf>
+              </owl:Class>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+              <owl:Restriction>
+                <owl:someValuesFrom>
+                  <owl:Class rdf:about="#Minimal_lymphocytic_inflammatory_infiltrate_in_dermis"/>
+                </owl:someValuesFrom>
+                <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+              </owl:Restriction>
+              <owl:Restriction>
+                <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasAbsentFinding"/>
+                <owl:someValuesFrom>
+                  <owl:Class rdf:ID="Inflammatory_infiltrate"/>
+                </owl:someValuesFrom>
+              </owl:Restriction>
+            </owl:unionOf>
+          </owl:Class>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="Isolated_lymphocytes_in_epidermis">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Isolated_lymphocytes"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Epidermis"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Isolated"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Lymphocyte"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Epidermis"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="#Isolated_lymphocytes">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Isolated"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Lymphocyte"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Lymphocyte"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Isolated"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Marked_solar_elastosis">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Marked"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Solar_elastosis"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Solar_elastosis"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Marked"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Biopsy">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Procedure"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Thrombus">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Diagnostic"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#OTHER_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Adnexa">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Locative"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LOCATION"/>
+  </owl:Class>
+  <owl:Class rdf:ID="HERPES_GESTATIONIS">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Subepidermal_blister"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+              <owl:Restriction>
+                <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+                <owl:someValuesFrom>
+                  <owl:Class>
+                    <owl:intersectionOf rdf:parseType="Collection">
+                      <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                          <owl:Class rdf:about="#Minimal_lymphocytic_inflammatory_infiltrate_in_dermis"/>
+                          <owl:Class rdf:about="#Moderate_lymphocytic_inflammatory_infiltrate_in_dermis"/>
+                        </owl:unionOf>
+                      </owl:Class>
+                      <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                          <owl:Class rdf:ID="Isolated_eosinophils_in_dermis"/>
+                          <owl:Class rdf:ID="Isolated_neutrophils_in_dermis"/>
+                        </owl:unionOf>
+                      </owl:Class>
+                    </owl:intersectionOf>
+                  </owl:Class>
+                </owl:someValuesFrom>
+              </owl:Restriction>
+              <owl:Restriction>
+                <owl:someValuesFrom>
+                  <owl:Class>
+                    <owl:unionOf rdf:parseType="Collection">
+                      <owl:Class rdf:ID="Moderate_eosinophilic_inflammatory_infiltrate_in_dermis"/>
+                      <owl:Class rdf:ID="Marked_eosinophilic_inflammatory_infiltrate_in_dermis"/>
+                    </owl:unionOf>
+                  </owl:Class>
+                </owl:someValuesFrom>
+                <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+              </owl:Restriction>
+              <owl:Restriction>
+                <owl:someValuesFrom>
+                  <owl:Class>
+                    <owl:intersectionOf rdf:parseType="Collection">
+                      <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                          <owl:Class rdf:about="#Moderate_eosinophilic_inflammatory_infiltrate_in_dermis"/>
+                          <owl:Class rdf:about="#Marked_eosinophilic_inflammatory_infiltrate_in_dermis"/>
+                        </owl:unionOf>
+                      </owl:Class>
+                      <owl:Class rdf:ID="Isolated_eosinophils_in_blister"/>
+                    </owl:intersectionOf>
+                  </owl:Class>
+                </owl:someValuesFrom>
+                <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+              </owl:Restriction>
+              <owl:Restriction>
+                <owl:someValuesFrom>
+                  <owl:Class>
+                    <owl:intersectionOf rdf:parseType="Collection">
+                      <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                          <owl:Class rdf:about="#Moderate_eosinophilic_inflammatory_infiltrate_in_dermis"/>
+                          <owl:Class rdf:about="#Marked_eosinophilic_inflammatory_infiltrate_in_dermis"/>
+                        </owl:unionOf>
+                      </owl:Class>
+                      <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                          <owl:Class rdf:ID="Moderate_neutrophilic_inflammatory_infiltrate_in_dermis"/>
+                          <owl:Class rdf:ID="Marked_neutrophilic_inflammatory_infiltrate_in_dermis"/>
+                        </owl:unionOf>
+                      </owl:Class>
+                      <owl:Class rdf:about="#Isolated_eosinophils_in_blister"/>
+                      <owl:Class rdf:ID="Isolated_neutrophils_in_blister"/>
+                    </owl:intersectionOf>
+                  </owl:Class>
+                </owl:someValuesFrom>
+                <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+              </owl:Restriction>
+            </owl:unionOf>
+          </owl:Class>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#SUBEPIDERMAL_VESICULAR_DERMATITIS"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Vessel">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LOCATION"/>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Locative"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="CICATRICIAL_PEMPHIGOID">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#SUBEPIDERMAL_VESICULAR_DERMATITIS"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Subepidermal_blister"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                  <owl:Class rdf:about="#Moderate_neutrophilic_inflammatory_infiltrate_in_dermis"/>
+                  <owl:Class rdf:about="#Marked_neutrophilic_inflammatory_infiltrate_in_dermis"/>
+                </owl:unionOf>
+              </owl:Class>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="Fibrosis">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Diagnostic"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#ARCHITECTURAL_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Minimal_neutrophilic_inflammatory_infiltrate_in_reticular_dermis">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Reticular_dermis"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Minimal"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Neutrophilic_inflammatory_infiltrate"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Minimal"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Neutrophilic"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Inflammatory_infiltrate"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Reticular_dermis"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="Amyloid">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Diagnostic"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#ARCHITECTURAL_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Confluent">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#MODIFIERS"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Keratinocyte">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LOCATION"/>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Locative"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Diagnostic"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#CYTOLOGIC_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Globule_of_amyloid_in_superficial_dermis">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Globule"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom rdf:resource="#Amyloid"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Superficial_dermis"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Globule"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Amyloid"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Superficial_dermis"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="SUCTION_BLISTER">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#SUBEPIDERMAL_VESICULAR_DERMATITIS"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Subepidermal_blister"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Papillae_preserved"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Inflammatory_infiltrate"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasAbsentFinding"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="Bundle">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Marked_neutrophilic_inflammatory_infiltrate_in_dermis">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Dermis"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Marked"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Neutrophilic_inflammatory_infiltrate"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Marked"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Neutrophilic"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Inflammatory_infiltrate"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Dermis"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="Infiltrate">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Subepidermal_fibrosis">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Subepidermal"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Fibrosis"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Subepidermal"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Fibrosis"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="Eosinophilic_inflammatory_infiltrate">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Inflammatory_infiltrate"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Eosinophilic"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Eosinophilic"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Inflammatory_infiltrate"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="Nuclear">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#MODIFIERS"/>
+  </owl:Class>
+  <owl:Class rdf:ID="BULLOUS_PEMPHIGOID">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#SUBEPIDERMAL_VESICULAR_DERMATITIS"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Subepidermal_blister"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+              <owl:Restriction>
+                <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+                <owl:someValuesFrom>
+                  <owl:Class>
+                    <owl:intersectionOf rdf:parseType="Collection">
+                      <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                          <owl:Class rdf:about="#Minimal_lymphocytic_inflammatory_infiltrate_in_dermis"/>
+                          <owl:Class rdf:about="#Moderate_lymphocytic_inflammatory_infiltrate_in_dermis"/>
+                        </owl:unionOf>
+                      </owl:Class>
+                      <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                          <owl:Class rdf:about="#Isolated_eosinophils_in_dermis"/>
+                          <owl:Class rdf:about="#Isolated_neutrophils_in_dermis"/>
+                        </owl:unionOf>
+                      </owl:Class>
+                    </owl:intersectionOf>
+                  </owl:Class>
+                </owl:someValuesFrom>
+              </owl:Restriction>
+              <owl:Restriction>
+                <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+                <owl:someValuesFrom>
+                  <owl:Class>
+                    <owl:unionOf rdf:parseType="Collection">
+                      <owl:Class rdf:about="#Moderate_eosinophilic_inflammatory_infiltrate_in_dermis"/>
+                      <owl:Class rdf:about="#Marked_eosinophilic_inflammatory_infiltrate_in_dermis"/>
+                    </owl:unionOf>
+                  </owl:Class>
+                </owl:someValuesFrom>
+              </owl:Restriction>
+              <owl:Restriction>
+                <owl:someValuesFrom>
+                  <owl:Class>
+                    <owl:intersectionOf rdf:parseType="Collection">
+                      <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                          <owl:Class rdf:about="#Moderate_eosinophilic_inflammatory_infiltrate_in_dermis"/>
+                          <owl:Class rdf:about="#Marked_eosinophilic_inflammatory_infiltrate_in_dermis"/>
+                        </owl:unionOf>
+                      </owl:Class>
+                      <owl:Class rdf:about="#Isolated_eosinophils_in_blister"/>
+                    </owl:intersectionOf>
+                  </owl:Class>
+                </owl:someValuesFrom>
+                <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+              </owl:Restriction>
+              <owl:Restriction>
+                <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+                <owl:someValuesFrom>
+                  <owl:Class>
+                    <owl:intersectionOf rdf:parseType="Collection">
+                      <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                          <owl:Class rdf:about="#Moderate_eosinophilic_inflammatory_infiltrate_in_dermis"/>
+                          <owl:Class rdf:about="#Marked_eosinophilic_inflammatory_infiltrate_in_dermis"/>
+                        </owl:unionOf>
+                      </owl:Class>
+                      <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                          <owl:Class rdf:about="#Moderate_neutrophilic_inflammatory_infiltrate_in_dermis"/>
+                          <owl:Class rdf:about="#Marked_neutrophilic_inflammatory_infiltrate_in_dermis"/>
+                        </owl:unionOf>
+                      </owl:Class>
+                      <owl:Class rdf:about="#Isolated_eosinophils_in_blister"/>
+                      <owl:Class rdf:about="#Isolated_neutrophils_in_blister"/>
+                    </owl:intersectionOf>
+                  </owl:Class>
+                </owl:someValuesFrom>
+              </owl:Restriction>
+            </owl:unionOf>
+          </owl:Class>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="LEUKOCYTOCLASTIC_VASCULITIS">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Subepidermal_blister"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Fibrin_in_venule_walls"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Nuclear_dust"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom>
+              <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                  <owl:Class rdf:about="#Minimal_neutrophilic_inflammatory_infiltrate_in_reticular_dermis"/>
+                  <owl:Class rdf:about="#Marked_neutrophilic_inflammatory_infiltrate_in_dermis"/>
+                </owl:unionOf>
+              </owl:Class>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#SUBEPIDERMAL_VESICULAR_DERMATITIS"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Blister">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LOCATION"/>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Diagnostic"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#ARCHITECTURAL_FEATURES"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Locative"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Diffuse">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#MODIFIERS"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Re-excision">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Procedure"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Lymphocytic_inflammatory_infiltrate">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Lymphocytic"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Inflammatory_infiltrate"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Lymphocytic"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Inflammatory_infiltrate"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="Venule_wall">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Locative"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Venule"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Wall"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Venule"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Wall"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="Rim">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Elongated">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#MODIFIERS"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ERYTHEMA_MULTIFORME_SEVERE">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Subepidermal_blister"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Confluent_necrosis_of_epidermis"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Minimal_lymphocytic_inflammatory_infiltrate_in_dermis"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#SUBEPIDERMAL_VESICULAR_DERMATITIS"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="MUCHA_HABERMANN_DISEASE">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Subepidermal_blister"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Necrosis_of_isolated_keratinocytes"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom rdf:resource="#Ballooning"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom>
+              <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                  <owl:Class rdf:about="#Moderate_lymphocytic_inflammatory_infiltrate_in_dermis"/>
+                  <owl:Class rdf:about="#Marked_lymphocytic_inflammatory_infiltrate_in_dermis"/>
+                </owl:unionOf>
+              </owl:Class>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#SUBEPIDERMAL_VESICULAR_DERMATITIS"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Marked_wedge-shaped_eosinophilic_inflammatory_infiltrate_in_dermis">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Marked"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Wedge-shaped"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Eosinophilic"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Inflammatory_infiltrate"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Dermis"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Marked_eosinophilic_inflammatory_infiltrate_in_dermis"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Wedge-shaped"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ERYTHEMA_MULTIFORME">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Subepidermal_blister"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Necrosis_of_isolated_keratinocytes"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom rdf:resource="#Ballooning"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom>
+              <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                  <owl:Class rdf:about="#Moderate_lymphocytic_inflammatory_infiltrate_in_dermis"/>
+                  <owl:Class rdf:about="#Marked_lymphocytic_inflammatory_infiltrate_in_dermis"/>
+                </owl:unionOf>
+              </owl:Class>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#SUBEPIDERMAL_VESICULAR_DERMATITIS"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="SEPTIC_VASCULITIS">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Subepidermal_blister"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Thrombus_in_vessels_in_superficial_dermis"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom>
+              <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                  <owl:Class rdf:about="#Moderate_neutrophilic_inflammatory_infiltrate_in_dermis"/>
+                  <owl:Class rdf:about="#Marked_neutrophilic_inflammatory_infiltrate_in_dermis"/>
+                </owl:unionOf>
+              </owl:Class>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#SUBEPIDERMAL_VESICULAR_DERMATITIS"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Material">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="PYODERMA_GANGRENOSUM">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Subepidermal_blister"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Marked_diffuse_neutrophilic_inflammatory_infiltrate_in_dermis"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#SUBEPIDERMAL_VESICULAR_DERMATITIS"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Venule">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Locative"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LOCATION"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Isolated_eosinophils_in_epidermis">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Isolated"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Eosinophil"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Epidermis"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Isolated_eosinophils"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Epidermis"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Subepidermal_blister_along_adnexae">
+    <rdfs:subClassOf rdf:resource="#Adnexa"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Subepidermal_blister"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Subepidermal_blister"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Adnexa"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="#Eosinophilic">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#MODIFIERS"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ELECTRODESSICATION">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#SUBEPIDERMAL_VESICULAR_DERMATITIS"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Subepidermal_blister"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+              <owl:Restriction>
+                <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+                <owl:someValuesFrom>
+                  <owl:Class rdf:about="#Minimal_lymphocytic_inflammatory_infiltrate_in_dermis"/>
+                </owl:someValuesFrom>
+              </owl:Restriction>
+              <owl:Restriction>
+                <owl:someValuesFrom>
+                  <owl:Class rdf:about="#Inflammatory_infiltrate"/>
+                </owl:someValuesFrom>
+                <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasAbsentFinding"/>
+              </owl:Restriction>
+            </owl:unionOf>
+          </owl:Class>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Fringe_of_elongated_keratinocytes"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom rdf:resource="#Subepidermal_fibrosis"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="Necrosis_of_adnexae">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Necrosis"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Adnexa"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Necrosis"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Adnexa"/>
+  </owl:Class>
+  <owl:Class rdf:ID="HEPATOERYTHROPOIETIC_PROTOPORPHYRIA">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#SUBEPIDERMAL_VESICULAR_DERMATITIS"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Subepidermal_blister"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Perivenular_rims_of_homogenous_material"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Papillae_preserved"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom>
+              <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                  <owl:Class rdf:about="#Moderate_solar_elastosis"/>
+                  <owl:Class rdf:about="#Marked_solar_elastosis"/>
+                </owl:unionOf>
+              </owl:Class>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+              <owl:Restriction>
+                <owl:someValuesFrom>
+                  <owl:Class rdf:about="#Minimal_lymphocytic_inflammatory_infiltrate_in_dermis"/>
+                </owl:someValuesFrom>
+                <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+              </owl:Restriction>
+              <owl:Restriction>
+                <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasAbsentFinding"/>
+                <owl:someValuesFrom>
+                  <owl:Class rdf:about="#Inflammatory_infiltrate"/>
+                </owl:someValuesFrom>
+              </owl:Restriction>
+            </owl:unionOf>
+          </owl:Class>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="#Reticular_dermis">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Locative"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Dermis"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Wall">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Moderate_wedge-shaped_eosinophilic_inflammatory_infiltrate_in_dermis">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Moderate_eosinophilic_inflammatory_infiltrate_in_dermis"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Wedge-shaped"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom rdf:resource="#Moderate"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Wedge-shaped"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom rdf:resource="#Eosinophilic"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Inflammatory_infiltrate"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Dermis"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="#Superficial_dermis">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Locative"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Superficial"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Dermis"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Superficial"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Dermis"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="Preserved">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#MODIFIERS"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Marked_neutrophilic_inflammatory_infiltrate_in_subcutis">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Marked"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Subcutis"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Neutrophilic_inflammatory_infiltrate"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Marked"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Neutrophilic"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Inflammatory_infiltrate"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Subcutis"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="#Confluent_necrosis_of_epidermis">
+    <rdfs:subClassOf rdf:resource="#Confluent"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Necrosis"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Epidermis"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom rdf:resource="#Confluent"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Necrosis"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Epidermis"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="#Subepidermal_blister">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Subepidermal"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Blister"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+        <owl:someValuesFrom>
+          <owl:Class>
+            <owl:intersectionOf rdf:parseType="Collection">
+              <owl:Class rdf:about="#Subepidermal"/>
+              <owl:Class rdf:about="#Blister"/>
+            </owl:intersectionOf>
+          </owl:Class>
+        </owl:someValuesFrom>
+      </owl:Restriction>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="BARTS_SYNDROME">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom rdf:resource="#Subepidermal_blister"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasAbsentFinding"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Inflammatory_infiltrate"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#SUBEPIDERMAL_VESICULAR_DERMATITIS"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Hypergranulosis">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Diagnostic"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#ARCHITECTURAL_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Isolated_eosinophils">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Isolated"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Eosinophil"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Isolated"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Eosinophil"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="#Marked">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#MODIFIERS"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Papillae">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Papillae_preserved">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Papillae"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom rdf:resource="#Preserved"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="#Papillae"/>
+    <rdfs:subClassOf rdf:resource="#Preserved"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Diagnostic"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#ARCHITECTURAL_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Perivenular_rims_of_homogenous_material">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Perivenular"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom rdf:resource="#Rim"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Homogenous"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom rdf:resource="#Material"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Perivenular"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Rim"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Homogenous"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Material"/>
+  </owl:Class>
+  <owl:Class rdf:ID="EPIDERMOLYSIS_BULLOSA_DERMOLYTIC">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Subepidermal_blister"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Inflammatory_infiltrate"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasAbsentFinding"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#SUBEPIDERMAL_VESICULAR_DERMATITIS"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Minimal">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#MODIFIERS"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Mucin_in_reticular_dermis">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Mucin"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Reticular_dermis"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Mucin"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom rdf:resource="#Reticular_dermis"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="Elastosis">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Mucin">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Diagnostic"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#ARCHITECTURAL_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Globule">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Moderate_wedge-shaped_neutrophilic_inflammatory_infiltrate_in_dermis">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom rdf:resource="#Moderate"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Wedge-shaped"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Neutrophilic"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Inflammatory_infiltrate"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Dermis"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Wedge-shaped"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Moderate_neutrophilic_inflammatory_infiltrate_in_dermis"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Fibrin_in_venule_walls">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom rdf:resource="#Fibrin"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Venule_wall"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="#Fibrin"/>
+    <rdfs:subClassOf rdf:resource="#Venule_wall"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Isolated_eosinophils_in_blister">
+    <rdfs:subClassOf rdf:resource="#Isolated_eosinophils"/>
+    <rdfs:subClassOf rdf:resource="#Blister"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Isolated"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Eosinophil"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Blister"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="#Necrosis_of_isolated_keratinocytes">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Necrosis"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Isolated"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Keratinocyte"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Necrosis"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Isolated"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Keratinocyte"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Dust">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="LICHEN_SCLEROSUS_ET_ATROPHICUS">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom rdf:resource="#Subepidermal_blister"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Thick_collagen_bundles_in_reticular_dermis"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Subepidermal_fibrosis"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Sclerosis_of_papillary_dermis"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                  <owl:Class rdf:about="#Moderate_lymphocytic_inflammatory_infiltrate_in_dermis"/>
+                  <owl:Class rdf:about="#Marked_lymphocytic_inflammatory_infiltrate_in_dermis"/>
+                </owl:unionOf>
+              </owl:Class>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#SUBEPIDERMAL_VESICULAR_DERMATITIS"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="LICHEN_PLANUS_BULLOUS">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom rdf:resource="#Subepidermal_blister"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom rdf:resource="#Wedge-shaped_hypergranulosis"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                  <owl:Class rdf:about="#Moderate_lymphocytic_inflammatory_infiltrate_in_dermis"/>
+                  <owl:Class rdf:about="#Marked_lymphocytic_inflammatory_infiltrate_in_dermis"/>
+                </owl:unionOf>
+              </owl:Class>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#SUBEPIDERMAL_VESICULAR_DERMATITIS"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Isolated_eosinophils_in_dermis">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Isolated"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Eosinophil"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Dermis"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="#Isolated_eosinophils"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Dermis"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Procedure">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Prognostic"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#PROGNOSTIC_FINDINGS"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Marked_lymphocytic_inflammatory_infiltrate_in_dermis">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom rdf:resource="#Marked"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Lymphocytic"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Inflammatory_infiltrate"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Dermis"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="#Lymphocytic_inflammatory_infiltrate"/>
+    <rdfs:subClassOf rdf:resource="#Marked"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Dermis"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Dermis">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LOCATION"/>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Locative"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Marked_mast_cell_inflammatory_infiltrate_in_dermis">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Marked"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Mast_cell"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Inflammatory_infiltrate"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom rdf:resource="#Dermis"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="#Marked"/>
+    <rdfs:subClassOf rdf:resource="#Dermis"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Mast_cell_inflammatory_infiltrate"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#SUBEPIDERMAL_VESICULAR_DERMATITIS">
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+        <owl:someValuesFrom rdf:resource="#Subepidermal_blister"/>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#DISEASES"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Epidermis">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LOCATION"/>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Locative"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Eosinophil">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Diagnostic"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#CYTOLOGIC_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Moderate_solar_elastosis">
+    <rdfs:subClassOf rdf:resource="#Moderate"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Solar_elastosis"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom rdf:resource="#Moderate"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Solar_elastosis"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="#Fringe_of_elongated_keratinocytes">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Fringe"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom rdf:resource="#Elongated"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Keratinocyte"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Fringe"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Elongated_keratinocytes"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Thrombus_in_vessels_in_superficial_dermis">
+    <rdfs:subClassOf rdf:resource="#Thrombus"/>
+    <rdfs:subClassOf rdf:resource="#Vessel"/>
+    <rdfs:subClassOf rdf:resource="#Superficial_dermis"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom rdf:resource="#Thrombus"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom rdf:resource="#Vessel"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Superficial_dermis"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="#Solar_elastosis">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Solar_elastosis"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Elastosis"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Solar"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Solar"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Elastosis"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="URTICARIA_PIGMENTOSA">
+    <rdfs:subClassOf rdf:resource="#SUBEPIDERMAL_VESICULAR_DERMATITIS"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom rdf:resource="#Subepidermal_blister"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                  <owl:Class rdf:ID="Moderate_mast_cell_inflammatory_infiltrate_in_dermis"/>
+                  <owl:Class rdf:about="#Marked_mast_cell_inflammatory_infiltrate_in_dermis"/>
+                </owl:unionOf>
+              </owl:Class>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="Inflammatory">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#MODIFIERS"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Subcutis">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Locative"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LOCATION"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ERYTHROPOIETIC_PROTOPORPHYRIA">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom rdf:resource="#Subepidermal_blister"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Perivenular_rims_of_homogenous_material"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom rdf:resource="#Papillae_preserved"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                  <owl:Class rdf:about="#Moderate_solar_elastosis"/>
+                  <owl:Class rdf:about="#Marked_solar_elastosis"/>
+                </owl:unionOf>
+              </owl:Class>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+          <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+              <owl:Restriction>
+                <owl:someValuesFrom>
+                  <owl:Class rdf:about="#Minimal_lymphocytic_inflammatory_infiltrate_in_dermis"/>
+                </owl:someValuesFrom>
+                <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+              </owl:Restriction>
+              <owl:Restriction>
+                <owl:someValuesFrom>
+                  <owl:Class rdf:about="#Inflammatory_infiltrate"/>
+                </owl:someValuesFrom>
+                <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasAbsentFinding"/>
+              </owl:Restriction>
+            </owl:unionOf>
+          </owl:Class>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="#SUBEPIDERMAL_VESICULAR_DERMATITIS"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Wedge-shaped">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#MODIFIERS"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Sclerosis">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Diagnostic"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#ARCHITECTURAL_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Fringe">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Isolated">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#MODIFIERS"/>
+  </owl:Class>
+  <owl:Class rdf:ID="DERMATITIS_HERPETIFORMIS-LIKE_DRUG_ERUPTION">
+    <rdfs:subClassOf rdf:resource="#SUBEPIDERMAL_VESICULAR_DERMATITIS"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom rdf:resource="#Subepidermal_blister"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom>
+              <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                  <owl:Class rdf:about="#Moderate_neutrophilic_inflammatory_infiltrate_in_dermis"/>
+                  <owl:Class rdf:about="#Marked_neutrophilic_inflammatory_infiltrate_in_dermis"/>
+                </owl:unionOf>
+              </owl:Class>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Mucin_in_reticular_dermis"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Nuclear_dust"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="#Solar">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#MODIFIERS"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Thick">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#MODIFIERS"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Lymphocytic">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#MODIFIERS"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Sclerosis_of_papillary_dermis">
+    <rdfs:subClassOf rdf:resource="#Sclerosis"/>
+    <rdfs:subClassOf rdf:resource="#Papillary_dermis"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom rdf:resource="#Sclerosis"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Papillary_dermis"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="Skin">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Tissue"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Moderate_eosinophilic_inflammatory_infiltrate_in_dermis">
+    <rdfs:subClassOf rdf:resource="#Moderate"/>
+    <rdfs:subClassOf rdf:resource="#Dermis"/>
+    <rdfs:subClassOf rdf:resource="#Eosinophilic_inflammatory_infiltrate"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Moderate"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Eosinophilic"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Inflammatory_infiltrate"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Dermis"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="#Marked_eosinophilic_inflammatory_infiltrate_in_dermis">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom rdf:resource="#Marked"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Eosinophilic"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Inflammatory_infiltrate"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom rdf:resource="#Dermis"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="#Marked"/>
+    <rdfs:subClassOf rdf:resource="#Dermis"/>
+    <rdfs:subClassOf rdf:resource="#Eosinophilic_inflammatory_infiltrate"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Neutrophilic_inflammatory_infiltrate">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Neutrophilic"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Inflammatory_infiltrate"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Neutrophilic"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Inflammatory_infiltrate"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="EPIDERMOLYISIS_BULLOSA_ACQUIRED">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom rdf:resource="#Subepidermal_blister"/>
+          </owl:Restriction>
+          <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+              <owl:Restriction>
+                <owl:someValuesFrom>
+                  <owl:Class rdf:about="#Inflammatory_infiltrate"/>
+                </owl:someValuesFrom>
+                <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasAbsentFinding"/>
+              </owl:Restriction>
+              <owl:Restriction>
+                <owl:someValuesFrom>
+                  <owl:Class>
+                    <owl:intersectionOf rdf:parseType="Collection">
+                      <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                          <owl:Class rdf:about="#Moderate_eosinophilic_inflammatory_infiltrate_in_dermis"/>
+                          <owl:Class rdf:about="#Marked_eosinophilic_inflammatory_infiltrate_in_dermis"/>
+                        </owl:unionOf>
+                      </owl:Class>
+                      <owl:Class rdf:about="#Isolated_eosinophils_in_blister"/>
+                    </owl:intersectionOf>
+                  </owl:Class>
+                </owl:someValuesFrom>
+                <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+              </owl:Restriction>
+              <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                  <owl:Restriction>
+                    <owl:someValuesFrom>
+                      <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                          <owl:Class>
+                            <owl:unionOf rdf:parseType="Collection">
+                              <owl:Class rdf:about="#Moderate_neutrophilic_inflammatory_infiltrate_in_dermis"/>
+                              <owl:Class rdf:about="#Marked_neutrophilic_inflammatory_infiltrate_in_dermis"/>
+                            </owl:unionOf>
+                          </owl:Class>
+                          <owl:Class rdf:about="#Nuclear_dust"/>
+                        </owl:intersectionOf>
+                      </owl:Class>
+                    </owl:someValuesFrom>
+                    <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+                  </owl:Restriction>
+                  <owl:Restriction>
+                    <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasAbsentFinding"/>
+                    <owl:someValuesFrom rdf:resource="#Mucin_in_reticular_dermis"/>
+                  </owl:Restriction>
+                </owl:intersectionOf>
+              </owl:Class>
+              <owl:Restriction>
+                <owl:someValuesFrom>
+                  <owl:Class>
+                    <owl:intersectionOf rdf:parseType="Collection">
+                      <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                          <owl:Class rdf:about="#Moderate_eosinophilic_inflammatory_infiltrate_in_dermis"/>
+                          <owl:Class rdf:about="#Marked_eosinophilic_inflammatory_infiltrate_in_dermis"/>
+                        </owl:unionOf>
+                      </owl:Class>
+                      <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                          <owl:Class rdf:about="#Moderate_neutrophilic_inflammatory_infiltrate_in_dermis"/>
+                          <owl:Class rdf:about="#Marked_neutrophilic_inflammatory_infiltrate_in_dermis"/>
+                        </owl:unionOf>
+                      </owl:Class>
+                      <owl:Class rdf:about="#Isolated_neutrophils_in_blister"/>
+                      <owl:Class rdf:about="#Isolated_eosinophils_in_blister"/>
+                    </owl:intersectionOf>
+                  </owl:Class>
+                </owl:someValuesFrom>
+                <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+              </owl:Restriction>
+            </owl:unionOf>
+          </owl:Class>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="#SUBEPIDERMAL_VESICULAR_DERMATITIS"/>
+  </owl:Class>
+  <owl:Class rdf:ID="PORPHYRIA_CUTANEA_TARDA">
+    <rdfs:subClassOf rdf:resource="#SUBEPIDERMAL_VESICULAR_DERMATITIS"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom rdf:resource="#Subepidermal_blister"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom rdf:resource="#Perivenular_rims_of_homogenous_material"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom rdf:resource="#Papillae_preserved"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom>
+              <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                  <owl:Class rdf:about="#Moderate_solar_elastosis"/>
+                  <owl:Class rdf:about="#Marked_solar_elastosis"/>
+                </owl:unionOf>
+              </owl:Class>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+              <owl:Restriction>
+                <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+                <owl:someValuesFrom>
+                  <owl:Class rdf:about="#Minimal_lymphocytic_inflammatory_infiltrate_in_dermis"/>
+                </owl:someValuesFrom>
+              </owl:Restriction>
+              <owl:Restriction>
+                <owl:someValuesFrom>
+                  <owl:Class rdf:about="#Inflammatory_infiltrate"/>
+                </owl:someValuesFrom>
+                <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasAbsentFinding"/>
+              </owl:Restriction>
+            </owl:unionOf>
+          </owl:Class>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="#Marked_diffuse_neutrophilic_inflammatory_infiltrate_in_dermis">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom rdf:resource="#Marked"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Diffuse"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Neutrophilic"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Inflammatory_infiltrate"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Dermis"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="#Diffuse"/>
+    <rdfs:subClassOf rdf:resource="#Marked_neutrophilic_inflammatory_infiltrate_in_dermis"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ACUTE_BURN">
+    <rdfs:subClassOf rdf:resource="#SUBEPIDERMAL_VESICULAR_DERMATITIS"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom rdf:resource="#Confluent_necrosis_of_epidermis"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom rdf:resource="#Subepidermal_blister"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Isolated_lymphocytes_in_epidermis"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasAbsentFinding"/>
+          </owl:Restriction>
+          <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+              <owl:Restriction>
+                <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+                <owl:someValuesFrom>
+                  <owl:Class rdf:about="#Minimal_lymphocytic_inflammatory_infiltrate_in_dermis"/>
+                </owl:someValuesFrom>
+              </owl:Restriction>
+              <owl:Restriction>
+                <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasAbsentFinding"/>
+                <owl:someValuesFrom>
+                  <owl:Class rdf:about="#Inflammatory_infiltrate"/>
+                </owl:someValuesFrom>
+              </owl:Restriction>
+            </owl:unionOf>
+          </owl:Class>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="#Thick_collagen_bundles_in_reticular_dermis">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Thick"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Collagen"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Bundle"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Reticular_dermis"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="#Thick"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Collagen"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Bundle"/>
+    <rdfs:subClassOf rdf:resource="#Reticular_dermis"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Tissue">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Prognostic"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#PROGNOSTIC_FINDINGS"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Superficial">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#MODIFIERS"/>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Excision">
+    <rdfs:subClassOf rdf:resource="#Procedure"/>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Anatomic_location">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Prognostic"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#PROGNOSTIC_FINDINGS"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Mast_cell_inflammatory_infiltrate">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Mast_cell"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Inflammatory_infiltrate"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Mast_cell"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Inflammatory_infiltrate"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Moderate_mast_cell_inflammatory_infiltrate_in_dermis">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Moderate"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Mast_cell"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Inflammatory_infiltrate"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Dermis"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="#Moderate"/>
+    <rdfs:subClassOf rdf:resource="#Dermis"/>
+    <rdfs:subClassOf rdf:resource="#Mast_cell_inflammatory_infiltrate"/>
+  </owl:Class>
+  <owl:Class rdf:ID="EPIDERMOLYSIS_BULLOSA_JUNCTIONAL">
+    <rdfs:subClassOf rdf:resource="#SUBEPIDERMAL_VESICULAR_DERMATITIS"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Inflammatory_infiltrate"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasAbsentFinding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Subepidermal_blister"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="#Minimal_lymphocytic_inflammatory_infiltrate_in_dermis">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Minimal"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Lymphocytic"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Inflammatory_infiltrate"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom rdf:resource="#Dermis"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="#Lymphocytic_inflammatory_infiltrate"/>
+    <rdfs:subClassOf rdf:resource="#Minimal"/>
+    <rdfs:subClassOf rdf:resource="#Dermis"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Neutrophilic">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#MODIFIERS"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Inflammatory_infiltrate">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Diagnostic"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Inflammatory"/>
+    <rdfs:subClassOf rdf:resource="#Infiltrate"/>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#ARCHITECTURAL_FEATURES"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom rdf:resource="#Inflammatory"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Infiltrate"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="#Lymphocyte">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#CYTOLOGIC_FEATURES"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Diagnostic"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Isolated_neutrophils_in_dermis">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Isolated_neutrophils"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Dermis"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Isolated"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Neutrophil"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom rdf:resource="#Dermis"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="HYPOXEMIA_PLUS_PRESSURE">
+    <rdfs:subClassOf rdf:resource="#SUBEPIDERMAL_VESICULAR_DERMATITIS"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom rdf:resource="#Subepidermal_blister"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Necrosis_of_adnexae"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom rdf:resource="#Minimal_lymphocytic_inflammatory_infiltrate_in_dermis"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="#Moderate_neutrophilic_inflammatory_infiltrate_in_dermis">
+    <rdfs:subClassOf rdf:resource="#Moderate"/>
+    <rdfs:subClassOf rdf:resource="#Dermis"/>
+    <rdfs:subClassOf rdf:resource="#Neutrophilic_inflammatory_infiltrate"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Moderate"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Neutrophilic"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom rdf:resource="#Inflammatory_infiltrate"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Dermis"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="#Homogenous">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#MODIFIERS"/>
+  </owl:Class>
+  <owl:Class rdf:ID="DERMATITIS_HERPETIFORMIS">
+    <rdfs:subClassOf rdf:resource="#SUBEPIDERMAL_VESICULAR_DERMATITIS"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Subepidermal_blister"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom>
+              <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                  <owl:Class rdf:about="#Moderate_neutrophilic_inflammatory_infiltrate_in_dermis"/>
+                  <owl:Class rdf:about="#Marked_neutrophilic_inflammatory_infiltrate_in_dermis"/>
+                </owl:unionOf>
+              </owl:Class>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom rdf:resource="#Mucin_in_reticular_dermis"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Nuclear_dust"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="#Mast_cell">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Diagnostic"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#MODIFIERS"/>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#CYTOLOGIC_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:ID="LINEAR_IGA_DERMATOSIS">
+    <rdfs:subClassOf rdf:resource="#SUBEPIDERMAL_VESICULAR_DERMATITIS"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom rdf:resource="#Subepidermal_blister"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Mucin_in_reticular_dermis"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Nuclear_dust"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom>
+              <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                  <owl:Class rdf:about="#Moderate_neutrophilic_inflammatory_infiltrate_in_dermis"/>
+                  <owl:Class rdf:about="#Marked_neutrophilic_inflammatory_infiltrate_in_dermis"/>
+                </owl:unionOf>
+              </owl:Class>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="#Necrosis">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Diagnostic"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#ARCHITECTURAL_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Marked_wedge-shaped_neutrophilic_inflammatory_infiltrate_in_dermis">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Marked"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Wedge-shaped"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom rdf:resource="#Neutrophilic"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Inflammatory_infiltrate"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Dermis"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="#Wedge-shaped"/>
+    <rdfs:subClassOf rdf:resource="#Marked_neutrophilic_inflammatory_infiltrate_in_dermis"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Nuclear_dust">
+    <rdfs:subClassOf rdf:resource="#Nuclear"/>
+    <rdfs:subClassOf rdf:resource="#Dust"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Diagnostic"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#CYTOLOGIC_FEATURES"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Nuclear"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom rdf:resource="#Dust"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="#Elongated_keratinocytes">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom rdf:resource="#Elongated"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Keratinocyte"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="#Elongated"/>
+    <rdfs:subClassOf rdf:resource="#Keratinocyte"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Isolated_neutrophils">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Isolated"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Neutrophil"/>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="#Isolated"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Neutrophil"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="SYSTEMIC_LUPUS_ERYTHEMATOSUS">
+    <rdfs:subClassOf rdf:resource="#SUBEPIDERMAL_VESICULAR_DERMATITIS"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom rdf:resource="#Subepidermal_blister"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom>
+              <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                  <owl:Class rdf:about="#Moderate_neutrophilic_inflammatory_infiltrate_in_dermis"/>
+                  <owl:Class rdf:about="#Marked_neutrophilic_inflammatory_infiltrate_in_dermis"/>
+                </owl:unionOf>
+              </owl:Class>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom rdf:resource="#Nuclear_dust"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+            <owl:someValuesFrom rdf:resource="#Mucin_in_reticular_dermis"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="ARTHROPOD_ASSAULT">
+    <rdfs:subClassOf rdf:resource="#SUBEPIDERMAL_VESICULAR_DERMATITIS"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Subepidermal_blister"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                  <owl:Class rdf:about="#Moderate_wedge-shaped_eosinophilic_inflammatory_infiltrate_in_dermis"/>
+                  <owl:Class rdf:about="#Marked_wedge-shaped_eosinophilic_inflammatory_infiltrate_in_dermis"/>
+                  <owl:Class rdf:about="#Moderate_wedge-shaped_neutrophilic_inflammatory_infiltrate_in_dermis"/>
+                  <owl:Class rdf:about="#Marked_wedge-shaped_neutrophilic_inflammatory_infiltrate_in_dermis"/>
+                </owl:unionOf>
+              </owl:Class>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasFinding"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="#Neutrophil">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Diagnostic"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#CYTOLOGIC_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Subepidermal">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LOCATION"/>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Locative"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#MODIFIERS"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Perivenular">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LOCATION"/>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Locative"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#MODIFIERS"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Moderate_lymphocytic_inflammatory_infiltrate_in_dermis">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Moderate"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Lymphocytic"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+            <owl:someValuesFrom rdf:resource="#Inflammatory_infiltrate"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Dermis"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="#Lymphocytic_inflammatory_infiltrate"/>
+    <rdfs:subClassOf rdf:resource="#Moderate"/>
+    <rdfs:subClassOf rdf:resource="#Dermis"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Collagen">
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#LEXICON"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasSemanticType"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#Diagnostic"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#JJ"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#hasPOS"/>
+        <owl:someValuesFrom rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#NN"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#MODIFIERS"/>
+    <rdfs:subClassOf rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#ARCHITECTURAL_FEATURES"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Isolated_neutrophils_in_blister">
+    <rdfs:subClassOf rdf:resource="#Blister"/>
+    <rdfs:subClassOf rdf:resource="#Isolated_neutrophils"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Isolated"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Neutrophil"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#Blister"/>
+            <owl:onProperty rdf:resource="http://slidetutor.upmc.edu/domainbuilder/owl/KnowledgeBase.owl#isConceptOf"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <Moderate_neutrophilic_inflammatory_infiltrate_in_dermis rdf:ID="Moderate_neutrophilic_inflammatory_infiltrate_in_dermis_5"/>
+  <Subepidermal_blister rdf:ID="Subepidermal_blister_3"/>
+  <Moderate_eosinophilic_inflammatory_infiltrate_in_dermis rdf:ID="Moderate_eosinophilic_inflammatory_infiltrate_in_dermis_2"/>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.3.1, Build 430)  http://protege.stanford.edu -->
